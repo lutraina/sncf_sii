@@ -1,0 +1,102 @@
+{% block doc %}
+<!DOCTYPE html>
+    <html{% block html_attribs %}{% endblock html_attribs %}>
+    {% block html %}
+        <head>
+        {% block head %}
+
+            <title>{% block title %}{{title|default}}{% endblock title %}</title>
+
+            {% block metas %}
+                <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
+            {% endblock metas %}
+
+            {% block styles %}
+                <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" type="text/css"/>
+                <link href="{{url_for('static', filename='css/bootstrap-datepicker.css')}}" rel="stylesheet" type="text/css"/>
+                <link href="{{url_for('static', filename='css/footable.core.css')}}" rel="stylesheet" type="text/css"/>
+                <link href="{{url_for('static', filename='css/footable.metro.css')}}" rel="stylesheet" type="text/css"/>
+                <link href="{{url_for('static', filename='font-awesome-4.5.0/css/font-awesome.css')}}" rel="stylesheet">
+                <link href="{{url_for('static', filename='css/toastr.min.css')}}" rel="stylesheet">
+            {% endblock styles %}
+
+        {% endblock head %}
+        </head>
+
+        <body{% block body_attribs %}{% endblock body_attribs %}>
+        {% block body %}
+            {% block navbar %}
+                {%  include 'layout/menu.html' %}
+            {% endblock navbar %}
+
+            <div class ="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-sm-9 col-sm-offset-1">
+                             <h1 class="page-header">{{ title }}</h1>
+                        </div>
+                    </div>
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+             </div>
+
+            <footer class="footer">
+              <div class="container">
+                <div class="col-sm-3 col-xs-2"><img src="{{url_for('static', filename='img/logo_sncf.png')}}" class="img-rounded" alt="Logo sncf" width="58" height="30"> <i class="fa fa-copyright"></i> 2016</div>
+                <div class="col-sm-5 col-xs-6"><p class="text-muted">OPTIM'Services - Production IT - Pôle Cyber-sécurité</p></div>
+                <div class="col-sm-4 col-xs-4"><p class="text-muted">Contact/Product Owner : <a href='mailto:jerome.vivier@sncf.fr?subject=[Condor]'>Jérome Vivier</a></p></div>
+              </div>
+            </footer>
+
+            {% block scripts %}
+                <script src="{{url_for('static', filename='js/jquery-2.1.4.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/bootstrap.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/bootstrap-tab.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/footable.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/footable.sort.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/footable.filter.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/footable.paginate.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/bootstrap-datepicker.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/bootstrap-datepicker.fr.min.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/toastr.min.js')}}" type="text/javascript"></script>
+                <script src="{{url_for('static', filename='js/jquery.autocomplete.min.js')}}" type="text/javascript"></script>
+
+                <script>
+                    var categorie_labels = {};
+                    categorie_labels['error'] = "Erreur";
+                    categorie_labels['success'] = "Succès";
+                    categorie_labels['info'] = "Information";
+                    categorie_labels['warning'] = "Attention";
+
+                    $(function () {
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "progressBar": true,
+                            "positionClass": "toast-top-right",
+                            "onclick": null,
+                            "showDuration": "400",
+                            "hideDuration": "1000",
+                            "timeOut": "7000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        };
+
+                        {% block flashes %}
+                            {% for category, message in get_flashed_messages(with_categories=true) %}
+                                toastr.{{ category }}("{{message}}",categorie_labels["{{ category }}"]);
+                            {% endfor %}
+                        {% endblock flashes %}
+                    })
+                </script>
+            {% endblock scripts %}
+        {% endblock body %}
+        </body>
+    {% endblock html %}
+    </html>
+{% endblock doc %}

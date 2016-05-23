@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <h1>MYLABEL - NOUVELLE DEMANDE DE LABEL</h1>
+
+    {{ form_start(form) }}
+	
+	{{ form_errors(form) }}
+	
+	<div id="demandes">
+		{{ form_row(form.nom) }}
+		{{ form_row(form.prenom) }}
+		{{ form_row(form.matricule) }}
+		{{ form_row(form.mail) }}
+		{{ form_row(form.nomProjet) }}
+		{{ form_row(form.descProjet) }}
+		{{ form_row(form.caracProjet) }}
+		{{ form_row(form.dateMEP) }}
+
+{#	{{ form_row(form.labelDmd) }}  #}
+
+		<div>
+			{{ form_label(form.labelDmd)}} 
+			
+			{{ form_errors(form.labelDmd) }}
+			
+			<div>
+				<div>
+					{{ form_widget(form.labelDmd[0], {'attr': {'class': 'form-control'}}) }}
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star1.png") }}" alt="Star 1" title="Star 1">
+				</div>
+				<div>
+					{{ form_widget(form.labelDmd[1], {'attr': {'class': 'form-control'}}) }}
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star2.png") }}" alt="Star 2" title="Star 2">
+				</div>	
+				<div>
+					{{ form_widget(form.labelDmd[2], {'attr': {'class': 'form-control'}}) }}
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star3.png") }}" alt="Star 3" title="Star 3">
+				</div>	
+			</div>
+
+			
+		</div>
+	
+	{{ form_row(form.dateLabel) }}
+	{{ form_rest(form)}}
+    </div>
+	<br/>
+
+	<input type="submit" value="Envoyer la demande" class="bouton" />
+    {{ form_end(form) }}
+
+    <div id="menu">
+        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
+        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
+        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
+    </div>
+    
+{% endblock %}
+
+  

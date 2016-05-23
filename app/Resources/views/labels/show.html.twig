@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Labels</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ label.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomprojet</th>
+                <td>{{ label.nomProjet }}</td>
+            </tr>
+            <tr>
+                <th>Lienprojet</th>
+                <td>{{ label.lienProjet }}</td>
+            </tr>
+            <tr>
+                <th>Versionprojet</th>
+                <td>{{ label.versionProjet }}</td>
+            </tr>
+            <tr>
+                <th>Labelprojet</th>
+                <td>{{ label.labelProjet }}</td>
+            </tr>
+            <tr>
+                <th>Annee1label</th>
+                <td>{% if label.annee1Label %}{{ label.annee1Label|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Annee2label</th>
+                <td>{% if label.annee2Label %}{{ label.annee2Label|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Annee3label</th>
+                <td>{% if label.annee3Label %}{{ label.annee3Label|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('labels_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('labels_edit', { 'id': label.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

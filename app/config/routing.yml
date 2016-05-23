@@ -1,0 +1,8 @@
+my_label:
+    resource: "@MyLabelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Demandes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datedmd</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Matricule</th>
+                <th>Mail</th>
+                <th>Nomprojet</th>
+                <th>Descprojet</th>
+                <th>Caracprojet</th>
+                <th>Datemep</th>
+                <th>Labeldmd</th>
+                <th>Datelabel</th>
+                <th>Statutlabel</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demande in demandes %}
+            <tr>
+                <td><a href="{{ path('demandes_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
+                <td>{% if demande.dateDmd %}{{ demande.dateDmd|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ demande.nom }}</td>
+                <td>{{ demande.prenom }}</td>
+                <td>{{ demande.matricule }}</td>
+                <td>{{ demande.mail }}</td>
+                <td>{{ demande.nomProjet }}</td>
+                <td>{{ demande.descProjet }}</td>
+                <td>{{ demande.caracProjet }}</td>
+                <td>{% if demande.dateMEP %}{{ demande.dateMEP|date('Y-m-d') }}{% endif %}</td>
+                <td>
+				  {% if demande.labelDmd==1 %} 
+                    [Image Star1.png]
+				  {% elseif demande.labelDmd==2 %} 
+                    [Image Star2.png]
+				  {% elseif demande.labelDmd==3 %} 
+                    [Image Star3.png]
+				  {% else %} 
+				    Erreur code label
+				  {% endif %} 
+				</td>
+                <td>{% if demande.dateLabel %}{{ demande.dateLabel|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ demande.statutDmd }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('demandes_show', { 'id': demande.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('demandes_edit', { 'id': demande.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('demandes_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

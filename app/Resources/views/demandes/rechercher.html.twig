@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>MYLABEL - SUIVI DE MES DEMANDES</h1>
+
+{#
+    {{ form_start(form, {'attr': {'action' :  "{{ path('demandes_rechercher') }}"} }) }}   
+#}
+
+    {{ form_start(form) }}   
+
+
+    {{ form_errors(form) }}
+	
+	<div id="recherche">
+		{{ form_row(form.matricule) }}
+		{{ form_row(form.id) }}
+    	{{ form_rest(form)}}
+    </div>
+
+	<input type="submit" value="Visualiser ma demande" class="bouton" />
+  
+	{{ form_end(form) }}
+	<br/>  
+
+    <div id="menu">
+        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
+        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
+        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
+    </div>
+        
+{% endblock %}
+

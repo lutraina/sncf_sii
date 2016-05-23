@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+ 
+
+{% block body %}
+    <h1>MYLABEL - ACCUEIL</h1>
+
+    <table class="tableau_labels">
+        <thead class="tableau_labels_entete">
+            <tr>
+                <th>Cycle de vie des Labels distribu&eacute;s</th>
+                <th>Version</th>
+                <th>
+					<img src="{{ asset("bundles/MyLabelBundle/images/Label.png") }}" alt="Trusted by SNCF" width="80">
+				</th>
+                <th>Ann&eacute;e 1</th>
+                <th>Ann&eacute;e 2</th>
+                <th>Ann&eacute;e 3</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for label in labels %}
+            <tr class="tableau_labels_ligne">
+                <td>
+					{{ label.nomProjet }}<br>
+                    <a href="{{ label.lienProjet }}">{{ label.lienProjet }}</a>
+				</td>
+                <td>{{ label.versionProjet }}</td>
+                <td>
+				  {% if label.labelProjet==1 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star1.png") }}" alt="Star 1" title="Star 1">
+				  {% elseif label.labelProjet==2 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star2.png") }}" alt="Star 2" title="Star 2">
+				  {% elseif label.labelProjet==3 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star3.png") }}" alt="Star 3" title="Star 3">
+				  {% else %} 
+				    Erreur code label
+				  {% endif %} 
+				</td>
+                <td>{% if label.annee1Label %}{{ label.annee1Label|date('d/m/Y') }}{% endif %}</td>
+                <td>{% if label.annee2Label %}{{ label.annee2Label|date('d/m/Y') }}{% endif %}</td>
+                <td>{% if label.annee3Label %}{{ label.annee3Label|date('d/m/Y') }}{% endif %}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+    <br>        
+    <div id="menu">
+        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
+        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
+        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
+    </div>
+
+{% endblock %}

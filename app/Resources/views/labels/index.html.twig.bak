@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Labels list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomprojet</th>
+                <th>Lienprojet</th>
+                <th>Versionprojet</th>
+                <th>Labelprojet</th>
+                <th>Annee1label</th>
+                <th>Annee2label</th>
+                <th>Annee3label</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for label in labels %}
+            <tr>
+                <td><a href="{{ path('labels_show', { 'id': label.id }) }}">{{ label.id }}</a></td>
+                <td>{{ label.nomProjet }}</td>
+                <td>{{ label.lienProjet }}</td>
+                <td>{{ label.versionProjet }}</td>
+                <td>{{ label.labelProjet }}</td>
+                <td>{% if label.annee1Label %}{{ label.annee1Label|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if label.annee2Label %}{{ label.annee2Label|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if label.annee3Label %}{{ label.annee3Label|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('labels_show', { 'id': label.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('labels_edit', { 'id': label.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('labels_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

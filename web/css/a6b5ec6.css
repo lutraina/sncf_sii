@@ -1,0 +1,95 @@
+ 	
+/* Sncf par Samuel */
+
+.tableau_labels td, th {
+    font-family: "Arial";
+	font-size: 16px;
+	padding: 15px;
+}
+
+.tableau_labels_entete {
+    background-color: rgb(0,154,166);
+    color: white;
+	font-weight: bold;
+    text-align: left;
+}
+
+.tableau_labels_ligne:nth-child(odd) {
+    background-color: rgb(185,185,185);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+.tableau_labels_ligne:nth-child(even) {
+    background-color: rgb(225,225,225);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+
+.tableau_demandes td, th {
+    font-family: "Arial";
+	font-size: 16px;
+	padding: 15px;
+}
+
+.tableau_demandes_entete {
+    background-color: rgb(0,154,166);
+    color: white;
+	font-weight: bold;
+    text-align: left;
+}
+
+.tableau_demandes_ligne td {
+	border-top-style: solid;
+	border-top-color: black;
+	border-top-width: 1px;
+    border-bottom-style: none;
+}
+
+.tableau_demandes_ligne:nth-child(odd) {
+    background-color: rgb(185,185,185);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+.tableau_demandes_ligne:nth-child(even) {
+    background-color: rgb(225,225,225);
+    color: black;
+	font-weight: normal;
+    text-align: left;
+}
+
+#demandes > div {
+     margin : 10px;
+}
+
+#demandes > div > label {
+    font-family: "Arial";
+	font-size: 20px;
+	font-weight: normal;
+	color: black;
+	display:inline-block;
+	width: 300px;
+}	
+
+#demandes > div > input, textarea {
+	width: 300px;
+}	
+
+#demandes > div > div {
+	display:inline-block;
+}	
+
+
+.required:before {
+    color: red;
+    content:"*";
+	margin: 0px 0px 0px -12px;
+	padding: 0 5px 0 0;
+}
+
+/************************************/

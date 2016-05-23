@@ -1,0 +1,598 @@
+<?php
+
+/* demandes/new.html.twig.cfl */
+class __TwigTemplate_d0ce8f8b102998b654dea515245cdccdfa6cd0bd30c9042ed2070be1ee25590e extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+\t<head>
+\t\t<meta charset=\"UTF-8\" />
+\t\t<title>Welcome!</title>
+\t\t<link rel=\"icon\" type=\"image/x-icon\" href=\"/MyLabel/web/favicon.ico\" />
+\t\t<style media=\"screen\" type=\"text/css\">
+
+\t\t.demandes div {
+\t\t\tcolor: red;
+\t\t}
+
+\t\t.tableau_labels_entete {
+\t\t\tbackground-color: rgb(0,154,166);
+\t\t\tcolor: white;
+\t\t\tfont-weight: bold;
+\t\t\ttext-align: left;
+\t\t}
+
+\t\t.tableau_labels_ligne:nth-child(odd) {
+\t\t\tbackground-color: rgb(185,185,185);
+\t\t\tcolor: black;
+\t\t\tfont-weight: normal;
+\t\t\ttext-align: left;
+\t\t}
+
+\t\t.tableau_labels_ligne:nth-child(even) {
+\t\t\tbackground-color: rgb(225,225,225);
+\t\t\tcolor: black;
+\t\t\tfont-weight: normal;
+\t\t\ttext-align: left;
+\t\t}
+
+\t\t</style>
+\t</head>
+\t<body>
+\t\t<h1>Demandes creation</h1>
+\t\t<form name=\"demandes\" method=\"post\">
+\t\t\t<div id=\"demandes\">
+\t\t\t\t<div>
+\t\t\t\t\t<label class=\"required\">Date dmd</label>
+\t\t\t\t\t<div id=\"demandes_dateDmd\">
+\t\t\t\t\t\t<select id=\"demandes_dateDmd_month\" name=\"demandes[dateDmd][month]\">
+\t\t\t\t\t\t\t<option value=\"1\" >Jan</option>
+\t\t\t\t\t\t\t<option value=\"2\" >Feb</option>
+\t\t\t\t\t\t\t<option value=\"3\" >Mar</option>
+\t\t\t\t\t\t\t<option value=\"4\" >Apr</option>
+\t\t\t\t\t\t\t<option value=\"5\" >May</option>
+\t\t\t\t\t\t\t<option value=\"6\" >Jun</option>
+\t\t\t\t\t\t\t<option value=\"7\" >Jul</option>
+\t\t\t\t\t\t\t<option value=\"8\" >Aug</option>
+\t\t\t\t\t\t\t<option value=\"9\" >Sep</option>
+\t\t\t\t\t\t\t<option value=\"10\" >Oct</option>
+\t\t\t\t\t\t\t<option value=\"11\" >Nov</option>
+\t\t\t\t\t\t\t<option value=\"12\" >Dec</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateDmd_day\" name=\"demandes[dateDmd][day]\">
+\t\t\t\t\t\t\t<option value=\"1\" >1</option>
+\t\t\t\t\t\t\t<option value=\"2\" >2</option>
+\t\t\t\t\t\t\t<option value=\"3\" >3</option>
+\t\t\t\t\t\t\t<option value=\"4\" >4</option>
+\t\t\t\t\t\t\t<option value=\"5\" >5</option>
+\t\t\t\t\t\t\t<option value=\"6\" >6</option>
+\t\t\t\t\t\t\t<option value=\"7\" >7</option>
+\t\t\t\t\t\t\t<option value=\"8\" >8</option>
+\t\t\t\t\t\t\t<option value=\"9\" >9</option>
+\t\t\t\t\t\t\t<option value=\"10\" >10</option>
+\t\t\t\t\t\t\t<option value=\"11\" >11</option>
+\t\t\t\t\t\t\t<option value=\"12\" >12</option>
+\t\t\t\t\t\t\t<option value=\"13\" >13</option>
+\t\t\t\t\t\t\t<option value=\"14\" >14</option>
+\t\t\t\t\t\t\t<option value=\"15\" >15</option>
+\t\t\t\t\t\t\t<option value=\"16\" >16</option>
+\t\t\t\t\t\t\t<option value=\"17\" >17</option>
+\t\t\t\t\t\t\t<option value=\"18\" >18</option>
+\t\t\t\t\t\t\t<option value=\"19\" >19</option>
+\t\t\t\t\t\t\t<option value=\"20\" >20</option>
+\t\t\t\t\t\t\t<option value=\"21\" >21</option>
+\t\t\t\t\t\t\t<option value=\"22\" >22</option>
+\t\t\t\t\t\t\t<option value=\"23\" >23</option>
+\t\t\t\t\t\t\t<option value=\"24\" >24</option>
+\t\t\t\t\t\t\t<option value=\"25\" >25</option>
+\t\t\t\t\t\t\t<option value=\"26\" >26</option>
+\t\t\t\t\t\t\t<option value=\"27\" >27</option>
+\t\t\t\t\t\t\t<option value=\"28\" >28</option>
+\t\t\t\t\t\t\t<option value=\"29\" >29</option>
+\t\t\t\t\t\t\t<option value=\"30\" >30</option>
+\t\t\t\t\t\t\t<option value=\"31\" >31</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateDmd_year\" name=\"demandes[dateDmd][year]\">
+\t\t\t\t\t\t\t<option value=\"2011\" >2011</option>
+\t\t\t\t\t\t\t<option value=\"2012\" >2012</option>
+\t\t\t\t\t\t\t<option value=\"2013\" >2013</option>
+\t\t\t\t\t\t\t<option value=\"2014\" >2014</option>
+\t\t\t\t\t\t\t<option value=\"2015\" >2015</option>
+\t\t\t\t\t\t\t<option value=\"2016\" >2016</option>
+\t\t\t\t\t\t\t<option value=\"2017\" >2017</option>
+\t\t\t\t\t\t\t<option value=\"2018\" >2018</option>
+\t\t\t\t\t\t\t<option value=\"2019\" >2019</option>
+\t\t\t\t\t\t\t<option value=\"2020\" >2020</option>
+\t\t\t\t\t\t\t<option value=\"2021\" >2021</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_nom\" class=\"required\">Nom</label>
+\t\t\t\t\t<input type=\"text\" id=\"demandes_nom\" name=\"demandes[nom]\" required=\"required\" maxlength=\"30\" />
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_prenom\" class=\"required\">Prenom</label>
+\t\t\t\t\t<input type=\"text\" id=\"demandes_prenom\" name=\"demandes[prenom]\" required=\"required\" maxlength=\"30\" />
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_matricule\" class=\"required\">Matricule</label>
+\t\t\t\t\t<input type=\"text\" id=\"demandes_matricule\" name=\"demandes[matricule]\" required=\"required\" maxlength=\"9\" />
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_mail\" class=\"required\">Mail</label>
+\t\t\t\t\t<input type=\"text\" id=\"demandes_mail\" name=\"demandes[mail]\" required=\"required\" maxlength=\"30\" />
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_nomProjet\" class=\"required\">Nom projet</label>
+\t\t\t\t\t<input type=\"text\" id=\"demandes_nomProjet\" name=\"demandes[nomProjet]\" required=\"required\" maxlength=\"50\" />
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_descProjet\" class=\"required\">Desc projet</label>
+\t\t\t\t\t<textarea id=\"demandes_descProjet\" name=\"demandes[descProjet]\" required=\"required\"></textarea>
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label for=\"demandes_caracProjet\">Carac projet</label>
+\t\t\t\t\t<textarea id=\"demandes_caracProjet\" name=\"demandes[caracProjet]\"></textarea>
+\t\t\t\t</div>
+\t\t\t\t<div>
+\t\t\t\t\t<label class=\"required\">Date m e p</label>
+\t\t\t\t\t<div id=\"demandes_dateMEP\">
+\t\t\t\t\t\t<select id=\"demandes_dateMEP_month\" name=\"demandes[dateMEP][month]\">
+\t\t\t\t\t\t\t<option value=\"1\" >Jan</option>
+\t\t\t\t\t\t\t<option value=\"2\" >Feb</option>
+\t\t\t\t\t\t\t<option value=\"3\" >Mar</option>
+\t\t\t\t\t\t\t<option value=\"4\" >Apr</option>
+\t\t\t\t\t\t\t<option value=\"5\" >May</option>
+\t\t\t\t\t\t\t<option value=\"6\" >Jun</option>
+\t\t\t\t\t\t\t<option value=\"7\" >Jul</option>
+\t\t\t\t\t\t\t<option value=\"8\" >Aug</option>
+\t\t\t\t\t\t\t<option value=\"9\" >Sep</option>
+\t\t\t\t\t\t\t<option value=\"10\" >Oct</option>
+\t\t\t\t\t\t\t<option value=\"11\" >Nov</option>
+\t\t\t\t\t\t\t<option value=\"12\" >Dec</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateMEP_day\" name=\"demandes[dateMEP][day]\">
+\t\t\t\t\t\t\t<option value=\"1\" >1</option>
+\t\t\t\t\t\t\t<option value=\"2\" >2</option>
+\t\t\t\t\t\t\t<option value=\"3\" >3</option>
+\t\t\t\t\t\t\t<option value=\"4\" >4</option>
+\t\t\t\t\t\t\t<option value=\"5\" >5</option>
+\t\t\t\t\t\t\t<option value=\"6\" >6</option>
+\t\t\t\t\t\t\t<option value=\"7\" >7</option>
+\t\t\t\t\t\t\t<option value=\"8\" >8</option>
+\t\t\t\t\t\t\t<option value=\"9\" >9</option>
+\t\t\t\t\t\t\t<option value=\"10\" >10</option>
+\t\t\t\t\t\t\t<option value=\"11\" >11</option>
+\t\t\t\t\t\t\t<option value=\"12\" >12</option>
+\t\t\t\t\t\t\t<option value=\"13\" >13</option>
+\t\t\t\t\t\t\t<option value=\"14\" >14</option>
+\t\t\t\t\t\t\t<option value=\"15\" >15</option>
+\t\t\t\t\t\t\t<option value=\"16\" >16</option>
+\t\t\t\t\t\t\t<option value=\"17\" >17</option>
+\t\t\t\t\t\t\t<option value=\"18\" >18</option>
+\t\t\t\t\t\t\t<option value=\"19\" >19</option>
+\t\t\t\t\t\t\t<option value=\"20\" >20</option>
+\t\t\t\t\t\t\t<option value=\"21\" >21</option>
+\t\t\t\t\t\t\t<option value=\"22\" >22</option>
+\t\t\t\t\t\t\t<option value=\"23\" >23</option>
+\t\t\t\t\t\t\t<option value=\"24\" >24</option>
+\t\t\t\t\t\t\t<option value=\"25\" >25</option>
+\t\t\t\t\t\t\t<option value=\"26\" >26</option>
+\t\t\t\t\t\t\t<option value=\"27\" >27</option>
+\t\t\t\t\t\t\t<option value=\"28\" >28</option>
+\t\t\t\t\t\t\t<option value=\"29\" >29</option>
+\t\t\t\t\t\t\t<option value=\"30\" >30</option>
+\t\t\t\t\t\t\t<option value=\"31\" >31</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateMEP_year\" name=\"demandes[dateMEP][year]\">
+\t\t\t\t\t\t\t<option value=\"2011\" >2011</option>
+\t\t\t\t\t\t\t<option value=\"2012\" >2012</option>
+\t\t\t\t\t\t\t<option value=\"2013\" >2013</option>
+\t\t\t\t\t\t\t<option value=\"2014\" >2014</option>
+\t\t\t\t\t\t\t<option value=\"2015\" >2015</option>
+\t\t\t\t\t\t\t<option value=\"2016\" >2016</option>
+\t\t\t\t\t\t\t<option value=\"2017\" >2017</option>
+\t\t\t\t\t\t\t<option value=\"2018\" >2018</option>
+\t\t\t\t\t\t\t<option value=\"2019\" >2019</option>
+\t\t\t\t\t\t\t<option value=\"2020\" >2020</option>
+\t\t\t\t\t\t\t<option value=\"2021\" >2021</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+<div>
+\t\t\t\t\t<label for=\"demandes_labelDmd\" class=\"required\">Label dmd</label>
+\t\t\t\t\t<input type=\"number\" id=\"demandes_labelDmd\" name=\"demandes[labelDmd]\" required=\"required\" />
+\t\t\t\t</div>
+<div>
+\t\t\t\t\t<label class=\"required\">Date label</label>
+\t\t\t\t\t<div id=\"demandes_dateLabel\">
+\t\t\t\t\t\t<select id=\"demandes_dateLabel_month\" name=\"demandes[dateLabel][month]\">
+\t\t\t\t\t\t\t<option value=\"1\" >Jan</option>
+\t\t\t\t\t\t\t<option value=\"2\" >Feb</option>
+\t\t\t\t\t\t\t<option value=\"3\" >Mar</option>
+\t\t\t\t\t\t\t<option value=\"4\" >Apr</option>
+\t\t\t\t\t\t\t<option value=\"5\" >May</option>
+\t\t\t\t\t\t\t<option value=\"6\" >Jun</option>
+\t\t\t\t\t\t\t<option value=\"7\" >Jul</option>
+\t\t\t\t\t\t\t<option value=\"8\" >Aug</option>
+\t\t\t\t\t\t\t<option value=\"9\" >Sep</option>
+\t\t\t\t\t\t\t<option value=\"10\" >Oct</option>
+\t\t\t\t\t\t\t<option value=\"11\" >Nov</option>
+\t\t\t\t\t\t\t<option value=\"12\" >Dec</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateLabel_day\" name=\"demandes[dateLabel][day]\">
+\t\t\t\t\t\t\t<option value=\"1\" >1</option>
+\t\t\t\t\t\t\t<option value=\"2\" >2</option>
+\t\t\t\t\t\t\t<option value=\"3\" >3</option>
+\t\t\t\t\t\t\t<option value=\"4\" >4</option>
+\t\t\t\t\t\t\t<option value=\"5\" >5</option>
+\t\t\t\t\t\t\t<option value=\"6\" >6</option>
+\t\t\t\t\t\t\t<option value=\"7\" >7</option>
+\t\t\t\t\t\t\t<option value=\"8\" >8</option>
+\t\t\t\t\t\t\t<option value=\"9\" >9</option>
+\t\t\t\t\t\t\t<option value=\"10\" >10</option>
+\t\t\t\t\t\t\t<option value=\"11\" >11</option>
+\t\t\t\t\t\t\t<option value=\"12\" >12</option>
+\t\t\t\t\t\t\t<option value=\"13\" >13</option>
+\t\t\t\t\t\t\t<option value=\"14\" >14</option>
+\t\t\t\t\t\t\t<option value=\"15\" >15</option>
+\t\t\t\t\t\t\t<option value=\"16\" >16</option>
+\t\t\t\t\t\t\t<option value=\"17\" >17</option>
+\t\t\t\t\t\t\t<option value=\"18\" >18</option>
+\t\t\t\t\t\t\t<option value=\"19\" >19</option>
+\t\t\t\t\t\t\t<option value=\"20\" >20</option>
+\t\t\t\t\t\t\t<option value=\"21\" >21</option>
+\t\t\t\t\t\t\t<option value=\"22\" >22</option>
+\t\t\t\t\t\t\t<option value=\"23\" >23</option>
+\t\t\t\t\t\t\t<option value=\"24\" >24</option>
+\t\t\t\t\t\t\t<option value=\"25\" >25</option>
+\t\t\t\t\t\t\t<option value=\"26\" >26</option>
+\t\t\t\t\t\t\t<option value=\"27\" >27</option>
+\t\t\t\t\t\t\t<option value=\"28\" >28</option>
+\t\t\t\t\t\t\t<option value=\"29\" >29</option>
+\t\t\t\t\t\t\t<option value=\"30\" >30</option>
+\t\t\t\t\t\t\t<option value=\"31\" >31</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<select id=\"demandes_dateLabel_year\" name=\"demandes[dateLabel][year]\">
+\t\t\t\t\t\t\t<option value=\"2011\" >2011</option>
+\t\t\t\t\t\t\t<option value=\"2012\" >2012</option>
+\t\t\t\t\t\t\t<option value=\"2013\" >2013</option>
+\t\t\t\t\t\t\t<option value=\"2014\" >2014</option>
+\t\t\t\t\t\t\t<option value=\"2015\" >2015</option>
+\t\t\t\t\t\t\t<option value=\"2016\" >2016</option>
+\t\t\t\t\t\t\t<option value=\"2017\" >2017</option>
+\t\t\t\t\t\t\t<option value=\"2018\" >2018</option>
+\t\t\t\t\t\t\t<option value=\"2019\" >2019</option>
+\t\t\t\t\t\t\t<option value=\"2020\" >2020</option>
+\t\t\t\t\t\t\t<option value=\"2021\" >2021</option>
+\t\t\t\t\t\t</select>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+<div>
+\t\t\t\t\t<label for=\"demandes_statutDmd\" class=\"required\">Statut dmd</label>
+\t\t\t\t\t<input type=\"number\" id=\"demandes_statutDmd\" name=\"demandes[statutDmd]\" required=\"required\" />
+\t\t\t\t</div>
+\t\t\t\t<input type=\"hidden\" id=\"demandes__token\" name=\"demandes[_token]\" value=\"5tPBGI37wK0Ejw1TotpEBf8NPRKs1BeCEz2OgfDOWxk\" />
+\t\t\t</div>
+\t\t\t<input type=\"submit\" value=\"Create\" />
+\t\t</form>
+\t\t<ul>
+\t\t\t<li>
+\t\t\t\t<a href=\"/MyLabel/web/app_dev.php/demandes/\">Back to the list</a>
+\t\t\t</li>
+\t\t</ul>
+\t\t<div id=\"sfwdt05e293\" class=\"sf-toolbar\" style=\"display: none\"/>
+\t\t<script>/*<![CDATA[*/        Sfjs = (function() {        \"use strict\";        var classListIsSupported = 'classList' in document.documentElement;        if (classListIsSupported) {            var hasClass = function (el, cssClass) { return el.classList.contains(cssClass); };            var removeClass = function(el, cssClass) { el.classList.remove(cssClass); };            var addClass = function(el, cssClass) { el.classList.add(cssClass); };            var toggleClass = function(el, cssClass) { el.classList.toggle(cssClass); };        } else {            var hasClass = function (el, cssClass) { return el.className.match(new RegExp('\\\\b' + cssClass + '\\\\b')); };            var removeClass = function(el, cssClass) { el.className = el.className.replace(new RegExp('\\\\b' + cssClass + '\\\\b'), ' '); };            var addClass = function(el, cssClass) { if (!hasClass(el, cssClass)) { el.className += \" \" + cssClass; } };            var toggleClass = function(el, cssClass) { hasClass(el, cssClass) ? removeClass(el, cssClass) : addClass(el, cssClass); };        }        var noop = function() {},            collectionToArray = function (collection) {                var length = collection.length || 0,                    results = new Array(length);                while (length--) {                    results[length] = collection[length];                }                return results;            },            profilerStorageKey = 'sf2/profiler/',            request = function(url, onSuccess, onError, payload, options) {                var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');                options = options || {};                options.maxTries = options.maxTries || 0;                xhr.open(options.method || 'GET', url, true);                xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');                xhr.onreadystatechange = function(state) {                    if (4 !== xhr.readyState) {                        return null;                    }                    if (xhr.status == 404 && options.maxTries > 1) {                        setTimeout(function(){                            options.maxTries--;                            request(url, onSuccess, onError, payload, options);                        }, 500);                        return null;                    }                    if (200 === xhr.status) {                        (onSuccess || noop)(xhr);                    } else {                        (onError || noop)(xhr);                    }                };                xhr.send(payload || '');            },            getPreference = function(name) {                if (!window.localStorage) {                    return null;                }                return localStorage.getItem(profilerStorageKey + name);            },            setPreference = function(name, value) {                if (!window.localStorage) {                    return null;                }                localStorage.setItem(profilerStorageKey + name, value);            },            requestStack = [],            renderAjaxRequests = function() {                var requestCounter = document.querySelectorAll('.sf-toolbar-ajax-requests');                if (!requestCounter.length) {                    return;                }                var ajaxToolbarPanel = document.querySelector('.sf-toolbar-block-ajax');                var tbodies = document.querySelectorAll('.sf-toolbar-ajax-request-list');                var state = 'ok';                if (tbodies.length) {                    var tbody = tbodies[0];                    var rows = document.createDocumentFragment();                    if (requestStack.length) {                        for (var i = 0; i < requestStack.length; i++) {                            var request = requestStack[i];                            var row = document.createElement('tr');                            rows.insertBefore(row, rows.firstChild);                            var methodCell = document.createElement('td');                            if (request.error) {                                methodCell.className = 'sf-ajax-request-error';                            }                            methodCell.textContent = request.method;                            row.appendChild(methodCell);                            var pathCell = document.createElement('td');                            pathCell.className = 'sf-ajax-request-url';                            if ('GET' === request.method) {                                var pathLink = document.createElement('a');                                pathLink.setAttribute('href', request.url);                                pathLink.textContent = request.url;                                pathCell.appendChild(pathLink);                            } else {                                pathCell.textContent = request.url;                            }                            pathCell.setAttribute('title', request.url);                            row.appendChild(pathCell);                            var durationCell = document.createElement('td');                            durationCell.className = 'sf-ajax-request-duration';                            if (request.duration) {                                durationCell.textContent = request.duration + \"ms\";                            } else {                                durationCell.textContent = '-';                            }                            row.appendChild(durationCell);                            row.appendChild(document.createTextNode(' '));                            var profilerCell = document.createElement('td');                            if (request.profilerUrl) {                                var profilerLink = document.createElement('a');                                profilerLink.setAttribute('href', request.profilerUrl);                                profilerLink.textContent = request.profile;                                profilerCell.appendChild(profilerLink);                            } else {                                profilerCell.textContent = 'n/a';                            }                            row.appendChild(profilerCell);                            var requestState = 'ok';                            if (request.error) {                                requestState = 'error';                                if (state != \"loading\" && i > requestStack.length - 4) {                                    state = 'error';                                }                            } else if (request.loading) {                                requestState = 'loading';                                state = 'loading';                            }                            row.className = 'sf-ajax-request sf-ajax-request-' + requestState;                        }                        var infoSpan = document.querySelectorAll(\".sf-toolbar-ajax-info\")[0];                        var children = collectionToArray(tbody.children);                        for (var i = 0; i < children.length; i++) {                            tbody.removeChild(children[i]);                        }                        tbody.appendChild(rows);                        if (infoSpan) {                            var text = requestStack.length + ' AJAX request' + (requestStack.length > 1 ? 's' : '');                            infoSpan.textContent = text;                        }                        ajaxToolbarPanel.style.display = 'block';                    } else {                        ajaxToolbarPanel.style.display = 'none';                    }                }                requestCounter[0].textContent = requestStack.length;                var className = 'sf-toolbar-ajax-requests sf-toolbar-value';                requestCounter[0].className = className;                if (state == 'ok') {                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                } else if (state == 'error') {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                } else {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                }            };        var addEventListener;        var el = document.createElement('div');        if (!'addEventListener' in el) {            addEventListener = function (element, eventName, callback) {                element.attachEvent('on' + eventName, callback);            };        } else {            addEventListener = function (element, eventName, callback) {                element.addEventListener(eventName, callback, false);            };        }                    if (window.XMLHttpRequest && XMLHttpRequest.prototype.addEventListener) {                var proxied = XMLHttpRequest.prototype.open;                XMLHttpRequest.prototype.open = function(method, url, async, user, pass) {                    var self = this;                    /* prevent logging AJAX calls to static and inline files, like templates */                    var path = url;                    if (url.substr(0, 1) === '/') {                        if (0 === url.indexOf('\\x2FMyLabel\\x2Fweb')) {                            path = url.substr(12);                        }                    }                    else if (0 === url.indexOf('http\\x3A\\x2F\\x2Flocalhost\\x2FMyLabel\\x2Fweb')) {                        path = url.substr(28);                    }                    if (!path.match(new RegExp(\"^\\/(app(_[\\\\w]+)?\\\\.php\\/)?_wdt\"))) {                        var stackElement = {                            loading: true,                            error: false,                            url: url,                            method: method,                            start: new Date()                        };                        requestStack.push(stackElement);                        this.addEventListener('readystatechange', function() {                            if (self.readyState == 4) {                                stackElement.duration = new Date() - stackElement.start;                                stackElement.loading = false;                                stackElement.error = self.status < 200 || self.status >= 400;                                stackElement.profile = self.getResponseHeader(\"X-Debug-Token\");                                stackElement.profilerUrl = self.getResponseHeader(\"X-Debug-Token-Link\");                                Sfjs.renderAjaxRequests();                            }                        }, false);                        Sfjs.renderAjaxRequests();                    }                    proxied.apply(this, Array.prototype.slice.call(arguments));                };            }                return {            hasClass: hasClass,            removeClass: removeClass,            addClass: addClass,            toggleClass: toggleClass,            getPreference: getPreference,            setPreference: setPreference,            addEventListener: addEventListener,            request: request,            renderAjaxRequests: renderAjaxRequests,            load: function(selector, url, onSuccess, onError, options) {                var el = document.getElementById(selector);                if (el && el.getAttribute('data-sfurl') !== url) {                    request(                        url,                        function(xhr) {                            el.innerHTML = xhr.responseText;                            el.setAttribute('data-sfurl', url);                            removeClass(el, 'loading');                            (onSuccess || noop)(xhr, el);                        },                        function(xhr) { (onError || noop)(xhr, el); },                        '',                        options                    );                }                return this;            },            toggle: function(selector, elOn, elOff) {                var tmp = elOn.style.display,                    el = document.getElementById(selector);                elOn.style.display = elOff.style.display;                elOff.style.display = tmp;                if (el) {                    el.style.display = 'none' === tmp ? 'none' : 'block';                }                return this;            },            createTabs: function() {                var tabGroups = document.querySelectorAll('.sf-tabs');                /* create the tab navigation for each group of tabs */                for (var i = 0; i < tabGroups.length; i++) {                    var tabs = tabGroups[i].querySelectorAll('.tab');                    var tabNavigation = document.createElement('ul');                    tabNavigation.className = 'tab-navigation';                    for (var j = 0; j < tabs.length; j++) {                        var tabId = 'tab-' + i + '-' + j;                        var tabTitle = tabs[j].querySelector('.tab-title').innerHTML;                        var tabNavigationItem = document.createElement('li');                        tabNavigationItem.setAttribute('data-tab-id', tabId);                        if (j == 0) { Sfjs.addClass(tabNavigationItem, 'active'); }                        if (Sfjs.hasClass(tabs[j], 'disabled')) { Sfjs.addClass(tabNavigationItem, 'disabled'); }                        tabNavigationItem.innerHTML = tabTitle;                        tabNavigation.appendChild(tabNavigationItem);                        var tabContent = tabs[j].querySelector('.tab-content');                        tabContent.parentElement.setAttribute('id', tabId);                    }                    tabGroups[i].insertBefore(tabNavigation, tabGroups[i].firstChild);                }                /* display the active tab and add the 'click' event listeners */                for (i = 0; i < tabGroups.length; i++) {                    tabNavigation = tabGroups[i].querySelectorAll('.tab-navigation li');                    for (j = 0; j < tabNavigation.length; j++) {                        tabId = tabNavigation[j].getAttribute('data-tab-id');                        document.getElementById(tabId).querySelector('.tab-title').className = 'hidden';                        if (Sfjs.hasClass(tabNavigation[j], 'active')) {                            document.getElementById(tabId).className = 'block';                        } else {                            document.getElementById(tabId).className = 'hidden';                        }                        tabNavigation[j].addEventListener('click', function(e) {                            var activeTab = e.target || e.srcElement;                            /* needed because when the tab contains HTML contents, user can click */                            /* on any of those elements instead of their parent '<li>' element */                            while (activeTab.tagName.toLowerCase() !== 'li') {                                activeTab = activeTab.parentNode;                            }                            /* get the full list of tabs through the parent of the active tab element */                            var tabNavigation = activeTab.parentNode.children;                            for (var k = 0; k < tabNavigation.length; k++) {                                var tabId = tabNavigation[k].getAttribute('data-tab-id');                                document.getElementById(tabId).className = 'hidden';                                Sfjs.removeClass(tabNavigation[k], 'active');                            }                            Sfjs.addClass(activeTab, 'active');                            var activeTabId = activeTab.getAttribute('data-tab-id');                            document.getElementById(activeTabId).className = 'block';                        });                    }                }            },            createToggles: function() {                var toggles = document.querySelectorAll('.sf-toggle');                for (var i = 0; i < toggles.length; i++) {                    var elementSelector = toggles[i].getAttribute('data-toggle-selector');                    var element = document.querySelector(elementSelector);                    Sfjs.addClass(element, 'sf-toggle-content');                    if (toggles[i].hasAttribute('data-toggle-initial') && toggles[i].getAttribute('data-toggle-initial') == 'display') {                        Sfjs.addClass(element, 'sf-toggle-visible');                    } else {                        Sfjs.addClass(element, 'sf-toggle-hidden');                    }                    Sfjs.addEventListener(toggles[i], 'click', function(e) {                        e.preventDefault();                        var toggle = e.target || e.srcElement;                        /* needed because when the toggle contains HTML contents, user can click */                        /* on any of those elements instead of their parent '.sf-toggle' element */                        while (!Sfjs.hasClass(toggle, 'sf-toggle')) {                            toggle = toggle.parentNode;                        }                        var element = document.querySelector(toggle.getAttribute('data-toggle-selector'));                        Sfjs.toggleClass(element, 'sf-toggle-hidden');                        Sfjs.toggleClass(element, 'sf-toggle-visible');                        /* the toggle doesn't change its contents when clicking on it */                        if (!toggle.hasAttribute('data-toggle-alt-content')) {                            return;                        }                        if (!toggle.hasAttribute('data-toggle-original-content')) {                            toggle.setAttribute('data-toggle-original-content', toggle.innerHTML);                        }                        var currentContent = toggle.innerHTML;                        var originalContent = toggle.getAttribute('data-toggle-original-content');                        var altContent = toggle.getAttribute('data-toggle-alt-content');                        toggle.innerHTML = currentContent !== altContent ? altContent : originalContent;                    });                }            }        };    })();    Sfjs.addEventListener(window, 'load', function() {        Sfjs.createTabs();        Sfjs.createToggles();    });/*]]>*/</script>
+\t\t<script>/*<![CDATA[*/    (function () {                Sfjs.load(            'sfwdt05e293',            '/MyLabel/web/app_dev.php/_wdt/05e293',            function(xhr, el) {                el.style.display = -1 !== xhr.responseText.indexOf('sf-toolbarreset') ? 'block' : 'none';                if (el.style.display == 'none') {                    return;                }                if (Sfjs.getPreference('toolbar/displayState') == 'none') {                    document.getElementById('sfToolbarMainContent-05e293').style.display = 'none';                    document.getElementById('sfToolbarClearer-05e293').style.display = 'none';                    document.getElementById('sfMiniToolbar-05e293').style.display = 'block';                } else {                    document.getElementById('sfToolbarMainContent-05e293').style.display = 'block';                    document.getElementById('sfToolbarClearer-05e293').style.display = 'block';                    document.getElementById('sfMiniToolbar-05e293').style.display = 'none';                }                Sfjs.renderAjaxRequests();                /* Handle toolbar-info position */                var toolbarBlocks = document.querySelectorAll('.sf-toolbar-block');                for (var i = 0; i < toolbarBlocks.length; i += 1) {                    toolbarBlocks[i].onmouseover = function () {                        var toolbarInfo = this.querySelectorAll('.sf-toolbar-info')[0];                        var pageWidth = document.body.clientWidth;                        var elementWidth = toolbarInfo.offsetWidth;                        var leftValue = (elementWidth + this.offsetLeft) - pageWidth;                        var rightValue = (elementWidth + (pageWidth - this.offsetLeft)) - pageWidth;                        /* Reset right and left value, useful on window resize */                        toolbarInfo.style.right = '';                        toolbarInfo.style.left = '';                        if (elementWidth > pageWidth) {                            toolbarInfo.style.left = 0;                        }                        else if (leftValue > 0 && rightValue > 0) {                            toolbarInfo.style.right = (rightValue * -1) + 'px';                        } else if (leftValue < 0) {                            toolbarInfo.style.left = 0;                        } else {                            toolbarInfo.style.right = '0px';                        }                    };                }            },            function(xhr) {                if (xhr.status !== 0) {                    confirm('An error occurred while loading the web debug toolbar (' + xhr.status + ': ' + xhr.statusText + ').\\n\\nDo you want to open the profiler?') && (window.location = '/MyLabel/web/app_dev.php/_profiler/05e293');                }            },            {'maxTries': 5}        );    })();/*]]>*/</script>
+\t</body>
+</html>";
+    }
+
+    public function getTemplateName()
+    {
+        return "demandes/new.html.twig.cfl";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  19 => 1,);
+    }
+}
+/* <!DOCTYPE html>*/
+/* <html>*/
+/* 	<head>*/
+/* 		<meta charset="UTF-8" />*/
+/* 		<title>Welcome!</title>*/
+/* 		<link rel="icon" type="image/x-icon" href="/MyLabel/web/favicon.ico" />*/
+/* 		<style media="screen" type="text/css">*/
+/* */
+/* 		.demandes div {*/
+/* 			color: red;*/
+/* 		}*/
+/* */
+/* 		.tableau_labels_entete {*/
+/* 			background-color: rgb(0,154,166);*/
+/* 			color: white;*/
+/* 			font-weight: bold;*/
+/* 			text-align: left;*/
+/* 		}*/
+/* */
+/* 		.tableau_labels_ligne:nth-child(odd) {*/
+/* 			background-color: rgb(185,185,185);*/
+/* 			color: black;*/
+/* 			font-weight: normal;*/
+/* 			text-align: left;*/
+/* 		}*/
+/* */
+/* 		.tableau_labels_ligne:nth-child(even) {*/
+/* 			background-color: rgb(225,225,225);*/
+/* 			color: black;*/
+/* 			font-weight: normal;*/
+/* 			text-align: left;*/
+/* 		}*/
+/* */
+/* 		</style>*/
+/* 	</head>*/
+/* 	<body>*/
+/* 		<h1>Demandes creation</h1>*/
+/* 		<form name="demandes" method="post">*/
+/* 			<div id="demandes">*/
+/* 				<div>*/
+/* 					<label class="required">Date dmd</label>*/
+/* 					<div id="demandes_dateDmd">*/
+/* 						<select id="demandes_dateDmd_month" name="demandes[dateDmd][month]">*/
+/* 							<option value="1" >Jan</option>*/
+/* 							<option value="2" >Feb</option>*/
+/* 							<option value="3" >Mar</option>*/
+/* 							<option value="4" >Apr</option>*/
+/* 							<option value="5" >May</option>*/
+/* 							<option value="6" >Jun</option>*/
+/* 							<option value="7" >Jul</option>*/
+/* 							<option value="8" >Aug</option>*/
+/* 							<option value="9" >Sep</option>*/
+/* 							<option value="10" >Oct</option>*/
+/* 							<option value="11" >Nov</option>*/
+/* 							<option value="12" >Dec</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateDmd_day" name="demandes[dateDmd][day]">*/
+/* 							<option value="1" >1</option>*/
+/* 							<option value="2" >2</option>*/
+/* 							<option value="3" >3</option>*/
+/* 							<option value="4" >4</option>*/
+/* 							<option value="5" >5</option>*/
+/* 							<option value="6" >6</option>*/
+/* 							<option value="7" >7</option>*/
+/* 							<option value="8" >8</option>*/
+/* 							<option value="9" >9</option>*/
+/* 							<option value="10" >10</option>*/
+/* 							<option value="11" >11</option>*/
+/* 							<option value="12" >12</option>*/
+/* 							<option value="13" >13</option>*/
+/* 							<option value="14" >14</option>*/
+/* 							<option value="15" >15</option>*/
+/* 							<option value="16" >16</option>*/
+/* 							<option value="17" >17</option>*/
+/* 							<option value="18" >18</option>*/
+/* 							<option value="19" >19</option>*/
+/* 							<option value="20" >20</option>*/
+/* 							<option value="21" >21</option>*/
+/* 							<option value="22" >22</option>*/
+/* 							<option value="23" >23</option>*/
+/* 							<option value="24" >24</option>*/
+/* 							<option value="25" >25</option>*/
+/* 							<option value="26" >26</option>*/
+/* 							<option value="27" >27</option>*/
+/* 							<option value="28" >28</option>*/
+/* 							<option value="29" >29</option>*/
+/* 							<option value="30" >30</option>*/
+/* 							<option value="31" >31</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateDmd_year" name="demandes[dateDmd][year]">*/
+/* 							<option value="2011" >2011</option>*/
+/* 							<option value="2012" >2012</option>*/
+/* 							<option value="2013" >2013</option>*/
+/* 							<option value="2014" >2014</option>*/
+/* 							<option value="2015" >2015</option>*/
+/* 							<option value="2016" >2016</option>*/
+/* 							<option value="2017" >2017</option>*/
+/* 							<option value="2018" >2018</option>*/
+/* 							<option value="2019" >2019</option>*/
+/* 							<option value="2020" >2020</option>*/
+/* 							<option value="2021" >2021</option>*/
+/* 						</select>*/
+/* 					</div>*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_nom" class="required">Nom</label>*/
+/* 					<input type="text" id="demandes_nom" name="demandes[nom]" required="required" maxlength="30" />*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_prenom" class="required">Prenom</label>*/
+/* 					<input type="text" id="demandes_prenom" name="demandes[prenom]" required="required" maxlength="30" />*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_matricule" class="required">Matricule</label>*/
+/* 					<input type="text" id="demandes_matricule" name="demandes[matricule]" required="required" maxlength="9" />*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_mail" class="required">Mail</label>*/
+/* 					<input type="text" id="demandes_mail" name="demandes[mail]" required="required" maxlength="30" />*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_nomProjet" class="required">Nom projet</label>*/
+/* 					<input type="text" id="demandes_nomProjet" name="demandes[nomProjet]" required="required" maxlength="50" />*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_descProjet" class="required">Desc projet</label>*/
+/* 					<textarea id="demandes_descProjet" name="demandes[descProjet]" required="required"></textarea>*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label for="demandes_caracProjet">Carac projet</label>*/
+/* 					<textarea id="demandes_caracProjet" name="demandes[caracProjet]"></textarea>*/
+/* 				</div>*/
+/* 				<div>*/
+/* 					<label class="required">Date m e p</label>*/
+/* 					<div id="demandes_dateMEP">*/
+/* 						<select id="demandes_dateMEP_month" name="demandes[dateMEP][month]">*/
+/* 							<option value="1" >Jan</option>*/
+/* 							<option value="2" >Feb</option>*/
+/* 							<option value="3" >Mar</option>*/
+/* 							<option value="4" >Apr</option>*/
+/* 							<option value="5" >May</option>*/
+/* 							<option value="6" >Jun</option>*/
+/* 							<option value="7" >Jul</option>*/
+/* 							<option value="8" >Aug</option>*/
+/* 							<option value="9" >Sep</option>*/
+/* 							<option value="10" >Oct</option>*/
+/* 							<option value="11" >Nov</option>*/
+/* 							<option value="12" >Dec</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateMEP_day" name="demandes[dateMEP][day]">*/
+/* 							<option value="1" >1</option>*/
+/* 							<option value="2" >2</option>*/
+/* 							<option value="3" >3</option>*/
+/* 							<option value="4" >4</option>*/
+/* 							<option value="5" >5</option>*/
+/* 							<option value="6" >6</option>*/
+/* 							<option value="7" >7</option>*/
+/* 							<option value="8" >8</option>*/
+/* 							<option value="9" >9</option>*/
+/* 							<option value="10" >10</option>*/
+/* 							<option value="11" >11</option>*/
+/* 							<option value="12" >12</option>*/
+/* 							<option value="13" >13</option>*/
+/* 							<option value="14" >14</option>*/
+/* 							<option value="15" >15</option>*/
+/* 							<option value="16" >16</option>*/
+/* 							<option value="17" >17</option>*/
+/* 							<option value="18" >18</option>*/
+/* 							<option value="19" >19</option>*/
+/* 							<option value="20" >20</option>*/
+/* 							<option value="21" >21</option>*/
+/* 							<option value="22" >22</option>*/
+/* 							<option value="23" >23</option>*/
+/* 							<option value="24" >24</option>*/
+/* 							<option value="25" >25</option>*/
+/* 							<option value="26" >26</option>*/
+/* 							<option value="27" >27</option>*/
+/* 							<option value="28" >28</option>*/
+/* 							<option value="29" >29</option>*/
+/* 							<option value="30" >30</option>*/
+/* 							<option value="31" >31</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateMEP_year" name="demandes[dateMEP][year]">*/
+/* 							<option value="2011" >2011</option>*/
+/* 							<option value="2012" >2012</option>*/
+/* 							<option value="2013" >2013</option>*/
+/* 							<option value="2014" >2014</option>*/
+/* 							<option value="2015" >2015</option>*/
+/* 							<option value="2016" >2016</option>*/
+/* 							<option value="2017" >2017</option>*/
+/* 							<option value="2018" >2018</option>*/
+/* 							<option value="2019" >2019</option>*/
+/* 							<option value="2020" >2020</option>*/
+/* 							<option value="2021" >2021</option>*/
+/* 						</select>*/
+/* 					</div>*/
+/* 				</div>*/
+/* <div>*/
+/* 					<label for="demandes_labelDmd" class="required">Label dmd</label>*/
+/* 					<input type="number" id="demandes_labelDmd" name="demandes[labelDmd]" required="required" />*/
+/* 				</div>*/
+/* <div>*/
+/* 					<label class="required">Date label</label>*/
+/* 					<div id="demandes_dateLabel">*/
+/* 						<select id="demandes_dateLabel_month" name="demandes[dateLabel][month]">*/
+/* 							<option value="1" >Jan</option>*/
+/* 							<option value="2" >Feb</option>*/
+/* 							<option value="3" >Mar</option>*/
+/* 							<option value="4" >Apr</option>*/
+/* 							<option value="5" >May</option>*/
+/* 							<option value="6" >Jun</option>*/
+/* 							<option value="7" >Jul</option>*/
+/* 							<option value="8" >Aug</option>*/
+/* 							<option value="9" >Sep</option>*/
+/* 							<option value="10" >Oct</option>*/
+/* 							<option value="11" >Nov</option>*/
+/* 							<option value="12" >Dec</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateLabel_day" name="demandes[dateLabel][day]">*/
+/* 							<option value="1" >1</option>*/
+/* 							<option value="2" >2</option>*/
+/* 							<option value="3" >3</option>*/
+/* 							<option value="4" >4</option>*/
+/* 							<option value="5" >5</option>*/
+/* 							<option value="6" >6</option>*/
+/* 							<option value="7" >7</option>*/
+/* 							<option value="8" >8</option>*/
+/* 							<option value="9" >9</option>*/
+/* 							<option value="10" >10</option>*/
+/* 							<option value="11" >11</option>*/
+/* 							<option value="12" >12</option>*/
+/* 							<option value="13" >13</option>*/
+/* 							<option value="14" >14</option>*/
+/* 							<option value="15" >15</option>*/
+/* 							<option value="16" >16</option>*/
+/* 							<option value="17" >17</option>*/
+/* 							<option value="18" >18</option>*/
+/* 							<option value="19" >19</option>*/
+/* 							<option value="20" >20</option>*/
+/* 							<option value="21" >21</option>*/
+/* 							<option value="22" >22</option>*/
+/* 							<option value="23" >23</option>*/
+/* 							<option value="24" >24</option>*/
+/* 							<option value="25" >25</option>*/
+/* 							<option value="26" >26</option>*/
+/* 							<option value="27" >27</option>*/
+/* 							<option value="28" >28</option>*/
+/* 							<option value="29" >29</option>*/
+/* 							<option value="30" >30</option>*/
+/* 							<option value="31" >31</option>*/
+/* 						</select>*/
+/* 						<select id="demandes_dateLabel_year" name="demandes[dateLabel][year]">*/
+/* 							<option value="2011" >2011</option>*/
+/* 							<option value="2012" >2012</option>*/
+/* 							<option value="2013" >2013</option>*/
+/* 							<option value="2014" >2014</option>*/
+/* 							<option value="2015" >2015</option>*/
+/* 							<option value="2016" >2016</option>*/
+/* 							<option value="2017" >2017</option>*/
+/* 							<option value="2018" >2018</option>*/
+/* 							<option value="2019" >2019</option>*/
+/* 							<option value="2020" >2020</option>*/
+/* 							<option value="2021" >2021</option>*/
+/* 						</select>*/
+/* 					</div>*/
+/* 				</div>*/
+/* <div>*/
+/* 					<label for="demandes_statutDmd" class="required">Statut dmd</label>*/
+/* 					<input type="number" id="demandes_statutDmd" name="demandes[statutDmd]" required="required" />*/
+/* 				</div>*/
+/* 				<input type="hidden" id="demandes__token" name="demandes[_token]" value="5tPBGI37wK0Ejw1TotpEBf8NPRKs1BeCEz2OgfDOWxk" />*/
+/* 			</div>*/
+/* 			<input type="submit" value="Create" />*/
+/* 		</form>*/
+/* 		<ul>*/
+/* 			<li>*/
+/* 				<a href="/MyLabel/web/app_dev.php/demandes/">Back to the list</a>*/
+/* 			</li>*/
+/* 		</ul>*/
+/* 		<div id="sfwdt05e293" class="sf-toolbar" style="display: none"/>*/
+/* 		<script>/*<![CDATA[*//*         Sfjs = (function() {        "use strict";        var classListIsSupported = 'classList' in document.documentElement;        if (classListIsSupported) {            var hasClass = function (el, cssClass) { return el.classList.contains(cssClass); };            var removeClass = function(el, cssClass) { el.classList.remove(cssClass); };            var addClass = function(el, cssClass) { el.classList.add(cssClass); };            var toggleClass = function(el, cssClass) { el.classList.toggle(cssClass); };        } else {            var hasClass = function (el, cssClass) { return el.className.match(new RegExp('\\b' + cssClass + '\\b')); };            var removeClass = function(el, cssClass) { el.className = el.className.replace(new RegExp('\\b' + cssClass + '\\b'), ' '); };            var addClass = function(el, cssClass) { if (!hasClass(el, cssClass)) { el.className += " " + cssClass; } };            var toggleClass = function(el, cssClass) { hasClass(el, cssClass) ? removeClass(el, cssClass) : addClass(el, cssClass); };        }        var noop = function() {},            collectionToArray = function (collection) {                var length = collection.length || 0,                    results = new Array(length);                while (length--) {                    results[length] = collection[length];                }                return results;            },            profilerStorageKey = 'sf2/profiler/',            request = function(url, onSuccess, onError, payload, options) {                var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');                options = options || {};                options.maxTries = options.maxTries || 0;                xhr.open(options.method || 'GET', url, true);                xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');                xhr.onreadystatechange = function(state) {                    if (4 !== xhr.readyState) {                        return null;                    }                    if (xhr.status == 404 && options.maxTries > 1) {                        setTimeout(function(){                            options.maxTries--;                            request(url, onSuccess, onError, payload, options);                        }, 500);                        return null;                    }                    if (200 === xhr.status) {                        (onSuccess || noop)(xhr);                    } else {                        (onError || noop)(xhr);                    }                };                xhr.send(payload || '');            },            getPreference = function(name) {                if (!window.localStorage) {                    return null;                }                return localStorage.getItem(profilerStorageKey + name);            },            setPreference = function(name, value) {                if (!window.localStorage) {                    return null;                }                localStorage.setItem(profilerStorageKey + name, value);            },            requestStack = [],            renderAjaxRequests = function() {                var requestCounter = document.querySelectorAll('.sf-toolbar-ajax-requests');                if (!requestCounter.length) {                    return;                }                var ajaxToolbarPanel = document.querySelector('.sf-toolbar-block-ajax');                var tbodies = document.querySelectorAll('.sf-toolbar-ajax-request-list');                var state = 'ok';                if (tbodies.length) {                    var tbody = tbodies[0];                    var rows = document.createDocumentFragment();                    if (requestStack.length) {                        for (var i = 0; i < requestStack.length; i++) {                            var request = requestStack[i];                            var row = document.createElement('tr');                            rows.insertBefore(row, rows.firstChild);                            var methodCell = document.createElement('td');                            if (request.error) {                                methodCell.className = 'sf-ajax-request-error';                            }                            methodCell.textContent = request.method;                            row.appendChild(methodCell);                            var pathCell = document.createElement('td');                            pathCell.className = 'sf-ajax-request-url';                            if ('GET' === request.method) {                                var pathLink = document.createElement('a');                                pathLink.setAttribute('href', request.url);                                pathLink.textContent = request.url;                                pathCell.appendChild(pathLink);                            } else {                                pathCell.textContent = request.url;                            }                            pathCell.setAttribute('title', request.url);                            row.appendChild(pathCell);                            var durationCell = document.createElement('td');                            durationCell.className = 'sf-ajax-request-duration';                            if (request.duration) {                                durationCell.textContent = request.duration + "ms";                            } else {                                durationCell.textContent = '-';                            }                            row.appendChild(durationCell);                            row.appendChild(document.createTextNode(' '));                            var profilerCell = document.createElement('td');                            if (request.profilerUrl) {                                var profilerLink = document.createElement('a');                                profilerLink.setAttribute('href', request.profilerUrl);                                profilerLink.textContent = request.profile;                                profilerCell.appendChild(profilerLink);                            } else {                                profilerCell.textContent = 'n/a';                            }                            row.appendChild(profilerCell);                            var requestState = 'ok';                            if (request.error) {                                requestState = 'error';                                if (state != "loading" && i > requestStack.length - 4) {                                    state = 'error';                                }                            } else if (request.loading) {                                requestState = 'loading';                                state = 'loading';                            }                            row.className = 'sf-ajax-request sf-ajax-request-' + requestState;                        }                        var infoSpan = document.querySelectorAll(".sf-toolbar-ajax-info")[0];                        var children = collectionToArray(tbody.children);                        for (var i = 0; i < children.length; i++) {                            tbody.removeChild(children[i]);                        }                        tbody.appendChild(rows);                        if (infoSpan) {                            var text = requestStack.length + ' AJAX request' + (requestStack.length > 1 ? 's' : '');                            infoSpan.textContent = text;                        }                        ajaxToolbarPanel.style.display = 'block';                    } else {                        ajaxToolbarPanel.style.display = 'none';                    }                }                requestCounter[0].textContent = requestStack.length;                var className = 'sf-toolbar-ajax-requests sf-toolbar-value';                requestCounter[0].className = className;                if (state == 'ok') {                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                } else if (state == 'error') {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                } else {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                }            };        var addEventListener;        var el = document.createElement('div');        if (!'addEventListener' in el) {            addEventListener = function (element, eventName, callback) {                element.attachEvent('on' + eventName, callback);            };        } else {            addEventListener = function (element, eventName, callback) {                element.addEventListener(eventName, callback, false);            };        }                    if (window.XMLHttpRequest && XMLHttpRequest.prototype.addEventListener) {                var proxied = XMLHttpRequest.prototype.open;                XMLHttpRequest.prototype.open = function(method, url, async, user, pass) {                    var self = this;                    /* prevent logging AJAX calls to static and inline files, like templates *//*                     var path = url;                    if (url.substr(0, 1) === '/') {                        if (0 === url.indexOf('\x2FMyLabel\x2Fweb')) {                            path = url.substr(12);                        }                    }                    else if (0 === url.indexOf('http\x3A\x2F\x2Flocalhost\x2FMyLabel\x2Fweb')) {                        path = url.substr(28);                    }                    if (!path.match(new RegExp("^\/(app(_[\\w]+)?\\.php\/)?_wdt"))) {                        var stackElement = {                            loading: true,                            error: false,                            url: url,                            method: method,                            start: new Date()                        };                        requestStack.push(stackElement);                        this.addEventListener('readystatechange', function() {                            if (self.readyState == 4) {                                stackElement.duration = new Date() - stackElement.start;                                stackElement.loading = false;                                stackElement.error = self.status < 200 || self.status >= 400;                                stackElement.profile = self.getResponseHeader("X-Debug-Token");                                stackElement.profilerUrl = self.getResponseHeader("X-Debug-Token-Link");                                Sfjs.renderAjaxRequests();                            }                        }, false);                        Sfjs.renderAjaxRequests();                    }                    proxied.apply(this, Array.prototype.slice.call(arguments));                };            }                return {            hasClass: hasClass,            removeClass: removeClass,            addClass: addClass,            toggleClass: toggleClass,            getPreference: getPreference,            setPreference: setPreference,            addEventListener: addEventListener,            request: request,            renderAjaxRequests: renderAjaxRequests,            load: function(selector, url, onSuccess, onError, options) {                var el = document.getElementById(selector);                if (el && el.getAttribute('data-sfurl') !== url) {                    request(                        url,                        function(xhr) {                            el.innerHTML = xhr.responseText;                            el.setAttribute('data-sfurl', url);                            removeClass(el, 'loading');                            (onSuccess || noop)(xhr, el);                        },                        function(xhr) { (onError || noop)(xhr, el); },                        '',                        options                    );                }                return this;            },            toggle: function(selector, elOn, elOff) {                var tmp = elOn.style.display,                    el = document.getElementById(selector);                elOn.style.display = elOff.style.display;                elOff.style.display = tmp;                if (el) {                    el.style.display = 'none' === tmp ? 'none' : 'block';                }                return this;            },            createTabs: function() {                var tabGroups = document.querySelectorAll('.sf-tabs');                /* create the tab navigation for each group of tabs *//*                 for (var i = 0; i < tabGroups.length; i++) {                    var tabs = tabGroups[i].querySelectorAll('.tab');                    var tabNavigation = document.createElement('ul');                    tabNavigation.className = 'tab-navigation';                    for (var j = 0; j < tabs.length; j++) {                        var tabId = 'tab-' + i + '-' + j;                        var tabTitle = tabs[j].querySelector('.tab-title').innerHTML;                        var tabNavigationItem = document.createElement('li');                        tabNavigationItem.setAttribute('data-tab-id', tabId);                        if (j == 0) { Sfjs.addClass(tabNavigationItem, 'active'); }                        if (Sfjs.hasClass(tabs[j], 'disabled')) { Sfjs.addClass(tabNavigationItem, 'disabled'); }                        tabNavigationItem.innerHTML = tabTitle;                        tabNavigation.appendChild(tabNavigationItem);                        var tabContent = tabs[j].querySelector('.tab-content');                        tabContent.parentElement.setAttribute('id', tabId);                    }                    tabGroups[i].insertBefore(tabNavigation, tabGroups[i].firstChild);                }                /* display the active tab and add the 'click' event listeners *//*                 for (i = 0; i < tabGroups.length; i++) {                    tabNavigation = tabGroups[i].querySelectorAll('.tab-navigation li');                    for (j = 0; j < tabNavigation.length; j++) {                        tabId = tabNavigation[j].getAttribute('data-tab-id');                        document.getElementById(tabId).querySelector('.tab-title').className = 'hidden';                        if (Sfjs.hasClass(tabNavigation[j], 'active')) {                            document.getElementById(tabId).className = 'block';                        } else {                            document.getElementById(tabId).className = 'hidden';                        }                        tabNavigation[j].addEventListener('click', function(e) {                            var activeTab = e.target || e.srcElement;                            /* needed because when the tab contains HTML contents, user can click *//*                             /* on any of those elements instead of their parent '<li>' element *//*                             while (activeTab.tagName.toLowerCase() !== 'li') {                                activeTab = activeTab.parentNode;                            }                            /* get the full list of tabs through the parent of the active tab element *//*                             var tabNavigation = activeTab.parentNode.children;                            for (var k = 0; k < tabNavigation.length; k++) {                                var tabId = tabNavigation[k].getAttribute('data-tab-id');                                document.getElementById(tabId).className = 'hidden';                                Sfjs.removeClass(tabNavigation[k], 'active');                            }                            Sfjs.addClass(activeTab, 'active');                            var activeTabId = activeTab.getAttribute('data-tab-id');                            document.getElementById(activeTabId).className = 'block';                        });                    }                }            },            createToggles: function() {                var toggles = document.querySelectorAll('.sf-toggle');                for (var i = 0; i < toggles.length; i++) {                    var elementSelector = toggles[i].getAttribute('data-toggle-selector');                    var element = document.querySelector(elementSelector);                    Sfjs.addClass(element, 'sf-toggle-content');                    if (toggles[i].hasAttribute('data-toggle-initial') && toggles[i].getAttribute('data-toggle-initial') == 'display') {                        Sfjs.addClass(element, 'sf-toggle-visible');                    } else {                        Sfjs.addClass(element, 'sf-toggle-hidden');                    }                    Sfjs.addEventListener(toggles[i], 'click', function(e) {                        e.preventDefault();                        var toggle = e.target || e.srcElement;                        /* needed because when the toggle contains HTML contents, user can click *//*                         /* on any of those elements instead of their parent '.sf-toggle' element *//*                         while (!Sfjs.hasClass(toggle, 'sf-toggle')) {                            toggle = toggle.parentNode;                        }                        var element = document.querySelector(toggle.getAttribute('data-toggle-selector'));                        Sfjs.toggleClass(element, 'sf-toggle-hidden');                        Sfjs.toggleClass(element, 'sf-toggle-visible');                        /* the toggle doesn't change its contents when clicking on it *//*                         if (!toggle.hasAttribute('data-toggle-alt-content')) {                            return;                        }                        if (!toggle.hasAttribute('data-toggle-original-content')) {                            toggle.setAttribute('data-toggle-original-content', toggle.innerHTML);                        }                        var currentContent = toggle.innerHTML;                        var originalContent = toggle.getAttribute('data-toggle-original-content');                        var altContent = toggle.getAttribute('data-toggle-alt-content');                        toggle.innerHTML = currentContent !== altContent ? altContent : originalContent;                    });                }            }        };    })();    Sfjs.addEventListener(window, 'load', function() {        Sfjs.createTabs();        Sfjs.createToggles();    });/*]]>*//* </script>*/
+/* 		<script>/*<![CDATA[*//*     (function () {                Sfjs.load(            'sfwdt05e293',            '/MyLabel/web/app_dev.php/_wdt/05e293',            function(xhr, el) {                el.style.display = -1 !== xhr.responseText.indexOf('sf-toolbarreset') ? 'block' : 'none';                if (el.style.display == 'none') {                    return;                }                if (Sfjs.getPreference('toolbar/displayState') == 'none') {                    document.getElementById('sfToolbarMainContent-05e293').style.display = 'none';                    document.getElementById('sfToolbarClearer-05e293').style.display = 'none';                    document.getElementById('sfMiniToolbar-05e293').style.display = 'block';                } else {                    document.getElementById('sfToolbarMainContent-05e293').style.display = 'block';                    document.getElementById('sfToolbarClearer-05e293').style.display = 'block';                    document.getElementById('sfMiniToolbar-05e293').style.display = 'none';                }                Sfjs.renderAjaxRequests();                /* Handle toolbar-info position *//*                 var toolbarBlocks = document.querySelectorAll('.sf-toolbar-block');                for (var i = 0; i < toolbarBlocks.length; i += 1) {                    toolbarBlocks[i].onmouseover = function () {                        var toolbarInfo = this.querySelectorAll('.sf-toolbar-info')[0];                        var pageWidth = document.body.clientWidth;                        var elementWidth = toolbarInfo.offsetWidth;                        var leftValue = (elementWidth + this.offsetLeft) - pageWidth;                        var rightValue = (elementWidth + (pageWidth - this.offsetLeft)) - pageWidth;                        /* Reset right and left value, useful on window resize *//*                         toolbarInfo.style.right = '';                        toolbarInfo.style.left = '';                        if (elementWidth > pageWidth) {                            toolbarInfo.style.left = 0;                        }                        else if (leftValue > 0 && rightValue > 0) {                            toolbarInfo.style.right = (rightValue * -1) + 'px';                        } else if (leftValue < 0) {                            toolbarInfo.style.left = 0;                        } else {                            toolbarInfo.style.right = '0px';                        }                    };                }            },            function(xhr) {                if (xhr.status !== 0) {                    confirm('An error occurred while loading the web debug toolbar (' + xhr.status + ': ' + xhr.statusText + ').\n\nDo you want to open the profiler?') && (window.location = '/MyLabel/web/app_dev.php/_profiler/05e293');                }            },            {'maxTries': 5}        );    })();/*]]>*//* </script>*/
+/* 	</body>*/
+/* </html>*/
