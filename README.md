@@ -1,5 +1,12 @@
 My_Label
 ========
 
-A Symfony project created on May 17, 2016, 3:52 pm.
-# sncf_sii
+A Sii projet de site internet pour la sncf.
+
+Dernières mises à jour :
+
+    -   Template responsive
+    -   Affichage des formulaires
+    -   Réglage des routers : liens
+    -   règle css : ajout de font une seule fois
+    -   Modifier base : matricule : unique / label étoiles choix : default 0

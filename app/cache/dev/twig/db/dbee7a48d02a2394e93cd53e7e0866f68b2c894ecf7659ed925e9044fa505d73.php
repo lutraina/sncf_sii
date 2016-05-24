@@ -8,7 +8,7 @@ class __TwigTemplate_5a1088686b5dbaa81bafc15a641a21d1298fc27311b87698d927d68bc49
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "demandes/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseResponsive2.html.twig", "demandes/new.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
@@ -16,158 +16,144 @@ class __TwigTemplate_5a1088686b5dbaa81bafc15a641a21d1298fc27311b87698d927d68bc49
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "baseResponsive2.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aeff8acf0dc74e8cd66cdd368e25e2b1fa82159c32b25725a63a6ca23369e026 = $this->env->getExtension("native_profiler");
-        $__internal_aeff8acf0dc74e8cd66cdd368e25e2b1fa82159c32b25725a63a6ca23369e026->enter($__internal_aeff8acf0dc74e8cd66cdd368e25e2b1fa82159c32b25725a63a6ca23369e026_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "demandes/new.html.twig"));
+        $__internal_0bb191b147fff104218270ff3bd4449b20f64eb3dd659df58ff95d85a5b610c9 = $this->env->getExtension("native_profiler");
+        $__internal_0bb191b147fff104218270ff3bd4449b20f64eb3dd659df58ff95d85a5b610c9->enter($__internal_0bb191b147fff104218270ff3bd4449b20f64eb3dd659df58ff95d85a5b610c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "demandes/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_aeff8acf0dc74e8cd66cdd368e25e2b1fa82159c32b25725a63a6ca23369e026->leave($__internal_aeff8acf0dc74e8cd66cdd368e25e2b1fa82159c32b25725a63a6ca23369e026_prof);
+        $__internal_0bb191b147fff104218270ff3bd4449b20f64eb3dd659df58ff95d85a5b610c9->leave($__internal_0bb191b147fff104218270ff3bd4449b20f64eb3dd659df58ff95d85a5b610c9_prof);
 
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d8070a1ae1905f97cb0312205ac1dfc9d50e76921dc9221c64abf69d0f2631b7 = $this->env->getExtension("native_profiler");
-        $__internal_d8070a1ae1905f97cb0312205ac1dfc9d50e76921dc9221c64abf69d0f2631b7->enter($__internal_d8070a1ae1905f97cb0312205ac1dfc9d50e76921dc9221c64abf69d0f2631b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_37ce2ae23ce720a4d48c92ad1e96ba7f2a6ef08ff6d6543e00fa194dda6e88d3 = $this->env->getExtension("native_profiler");
+        $__internal_37ce2ae23ce720a4d48c92ad1e96ba7f2a6ef08ff6d6543e00fa194dda6e88d3->enter($__internal_37ce2ae23ce720a4d48c92ad1e96ba7f2a6ef08ff6d6543e00fa194dda6e88d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>MYLABEL - NOUVELLE DEMANDE DE LABEL</h1>
+        // line 7
+        echo "     
+<!-- Two -->
+\t\t\t\t\t\t\t<section class=\"wrapper alt style1\" id=\"four\">
+\t\t\t\t\t\t\t\t<div class=\"inner\">
+                                                                    
+                                                                    
+\t\t\t\t\t\t\t\t\t<h2 style=\"margin-top:-55px;\" class=\"major\">MYLABEL - Nouvelle demande de label</h2>
+\t\t\t\t\t\t\t\t\t<p>Phrase de présentation ??</p>
+\t\t\t\t\t\t\t\t\t     
 
-    ";
-        // line 8
+    <ul class=\"actions\">
+                                            <li><a class=\"bouton menu\" href=\"/my_label/web/app_dev.php/demandes/rechercher\">Suivre mes demandes</a></li>
+                                            <li><a class=\"bouton menu\" href=\"/my_label/web/app_dev.php/demandes/nouvelle_demande\">Nouvelle demande de label</a></li>
+                                            <li><a href=\"";
+        // line 20
+        echo $this->env->getExtension('routing')->getPath("labels_index");
+        echo "\" class=\"bouton\">Label</a></li>
+                                    
+    </ul>
+                                    ";
+        // line 23
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
 \t
 \t";
-        // line 10
+        // line 25
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 \t
-\t<div id=\"demandes\">
+\t<div id=\"\">
 \t\t";
-        // line 13
+        // line 28
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nom", array()), 'row');
         echo "
 \t\t";
-        // line 14
+        // line 29
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "prenom", array()), 'row');
         echo "
 \t\t";
-        // line 15
+        // line 30
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "matricule", array()), 'row');
         echo "
 \t\t";
-        // line 16
+        // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "mail", array()), 'row');
         echo "
 \t\t";
-        // line 17
+        // line 32
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nomProjet", array()), 'row');
         echo "
 \t\t";
-        // line 18
+        // line 33
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descProjet", array()), 'row');
         echo "
 \t\t";
-        // line 19
+        // line 34
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "caracProjet", array()), 'row');
         echo "
 \t\t";
-        // line 20
+        // line 35
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateMEP", array()), 'row');
         echo "
 
 ";
-        // line 23
+        // line 38
         echo "
 \t\t<div>
 \t\t\t";
-        // line 25
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "labelDmd", array()), 'label');
         echo " 
 \t\t\t
 \t\t\t";
-        // line 27
+        // line 42
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "labelDmd", array()), 'errors');
         echo "
 \t\t\t
-\t\t\t<div>
-\t\t\t\t<div>
-\t\t\t\t\t";
-        // line 31
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "labelDmd", array()), 0, array(), "array"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t\t\t\t<img src=\"";
-        // line 32
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/MyLabelBundle/images/Star1.png"), "html", null, true);
-        echo "\" alt=\"Star 1\" title=\"Star 1\">
-\t\t\t\t</div>
-\t\t\t\t<div>
-\t\t\t\t\t";
-        // line 35
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "labelDmd", array()), 1, array(), "array"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t\t\t\t<img src=\"";
-        // line 36
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/MyLabelBundle/images/Star2.png"), "html", null, true);
-        echo "\" alt=\"Star 2\" title=\"Star 2\">
-\t\t\t\t</div>\t
-\t\t\t\t<div>
-\t\t\t\t\t";
-        // line 39
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "labelDmd", array()), 2, array(), "array"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t\t\t\t<img src=\"";
-        // line 40
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/MyLabelBundle/images/Star3.png"), "html", null, true);
-        echo "\" alt=\"Star 3\" title=\"Star 3\">
-\t\t\t\t</div>\t
-\t\t\t</div>
+\t\t\t<div> 
 
 \t\t\t
 \t\t</div>
 \t
 \t";
-        // line 47
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateLabel", array()), 'row');
         echo "
 \t";
-        // line 48
+        // line 50
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
     </div>
 \t<br/>
 
-\t<input type=\"submit\" value=\"Envoyer la demande\" class=\"bouton\" />
+\t<input type=\"submit\" value=\"Envoyer\" class=\"bouton\" />
     ";
-        // line 53
+        // line 55
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
-    <div id=\"menu\">
-        <a href=\"";
-        // line 56
-        echo $this->env->getExtension('routing')->getPath("labels_index");
-        echo "\" class=\"bouton\">Label</a>
-        <a href=\"";
-        // line 57
-        echo $this->env->getExtension('routing')->getPath("demandes_rechercher");
-        echo "\" class=\"bouton\">Suivre mes demandes</a>
-        <a href=\"";
-        // line 58
-        echo $this->env->getExtension('routing')->getPath("demandes_new");
-        echo "\" class=\"bouton\">Nouvelle demande de label</a>
-    </div>
+ 
+     
+\t\t\t\t\t\t 
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</section>
+ 
+     
+
+  
     
+        
 ";
         
-        $__internal_d8070a1ae1905f97cb0312205ac1dfc9d50e76921dc9221c64abf69d0f2631b7->leave($__internal_d8070a1ae1905f97cb0312205ac1dfc9d50e76921dc9221c64abf69d0f2631b7_prof);
+        $__internal_37ce2ae23ce720a4d48c92ad1e96ba7f2a6ef08ff6d6543e00fa194dda6e88d3->leave($__internal_37ce2ae23ce720a4d48c92ad1e96ba7f2a6ef08ff6d6543e00fa194dda6e88d3_prof);
 
     }
 
@@ -183,21 +169,36 @@ class __TwigTemplate_5a1088686b5dbaa81bafc15a641a21d1298fc27311b87698d927d68bc49
 
     public function getDebugInfo()
     {
-        return array (  164 => 58,  160 => 57,  156 => 56,  150 => 53,  142 => 48,  138 => 47,  128 => 40,  124 => 39,  118 => 36,  114 => 35,  108 => 32,  104 => 31,  97 => 27,  92 => 25,  88 => 23,  83 => 20,  79 => 19,  75 => 18,  71 => 17,  67 => 16,  63 => 15,  59 => 14,  55 => 13,  49 => 10,  44 => 8,  40 => 6,  34 => 5,  11 => 1,);
+        return array (  136 => 55,  128 => 50,  124 => 49,  114 => 42,  109 => 40,  105 => 38,  100 => 35,  96 => 34,  92 => 33,  88 => 32,  84 => 31,  80 => 30,  76 => 29,  72 => 28,  66 => 25,  61 => 23,  55 => 20,  40 => 7,  34 => 6,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'baseResponsive2.html.twig' %}*/
+/* */
 /* */
 /* */
 /* */
 /* {% block body %}*/
-/*     <h1>MYLABEL - NOUVELLE DEMANDE DE LABEL</h1>*/
+/*      */
+/* <!-- Two -->*/
+/* 							<section class="wrapper alt style1" id="four">*/
+/* 								<div class="inner">*/
+/*                                                                     */
+/*                                                                     */
+/* 									<h2 style="margin-top:-55px;" class="major">MYLABEL - Nouvelle demande de label</h2>*/
+/* 									<p>Phrase de présentation ??</p>*/
+/* 									     */
 /* */
-/*     {{ form_start(form) }}*/
+/*     <ul class="actions">*/
+/*                                             <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/rechercher">Suivre mes demandes</a></li>*/
+/*                                             <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/nouvelle_demande">Nouvelle demande de label</a></li>*/
+/*                                             <li><a href="{{ path('labels_index') }}" class="bouton">Label</a></li>*/
+/*                                     */
+/*     </ul>*/
+/*                                     {{ form_start(form) }}*/
 /* 	*/
 /* 	{{ form_errors(form) }}*/
 /* 	*/
-/* 	<div id="demandes">*/
+/* 	<div id="">*/
 /* 		{{ form_row(form.nom) }}*/
 /* 		{{ form_row(form.prenom) }}*/
 /* 		{{ form_row(form.matricule) }}*/
@@ -214,20 +215,7 @@ class __TwigTemplate_5a1088686b5dbaa81bafc15a641a21d1298fc27311b87698d927d68bc49
 /* 			*/
 /* 			{{ form_errors(form.labelDmd) }}*/
 /* 			*/
-/* 			<div>*/
-/* 				<div>*/
-/* 					{{ form_widget(form.labelDmd[0], {'attr': {'class': 'form-control'}}) }}*/
-/* 					<img src="{{ asset("bundles/MyLabelBundle/images/Star1.png") }}" alt="Star 1" title="Star 1">*/
-/* 				</div>*/
-/* 				<div>*/
-/* 					{{ form_widget(form.labelDmd[1], {'attr': {'class': 'form-control'}}) }}*/
-/* 					<img src="{{ asset("bundles/MyLabelBundle/images/Star2.png") }}" alt="Star 2" title="Star 2">*/
-/* 				</div>	*/
-/* 				<div>*/
-/* 					{{ form_widget(form.labelDmd[2], {'attr': {'class': 'form-control'}}) }}*/
-/* 					<img src="{{ asset("bundles/MyLabelBundle/images/Star3.png") }}" alt="Star 3" title="Star 3">*/
-/* 				</div>	*/
-/* 			</div>*/
+/* 			<div> */
 /* */
 /* 			*/
 /* 		</div>*/
@@ -237,15 +225,27 @@ class __TwigTemplate_5a1088686b5dbaa81bafc15a641a21d1298fc27311b87698d927d68bc49
 /*     </div>*/
 /* 	<br/>*/
 /* */
-/* 	<input type="submit" value="Envoyer la demande" class="bouton" />*/
+/* 	<input type="submit" value="Envoyer" class="bouton" />*/
 /*     {{ form_end(form) }}*/
 /* */
-/*     <div id="menu">*/
-/*         <a href="{{ path('labels_index') }}" class="bouton">Label</a>*/
-/*         <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>*/
-/*         <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>*/
-/*     </div>*/
+/*  */
+/*      */
+/* 						 */
+/*                                                                         */
+/*                                                                         */
+/*                                                                         */
+/*                                                                         */
+/* 								</div>*/
+/* 							</section>*/
+/*  */
+/*      */
+/* */
+/*   */
 /*     */
+/*         */
 /* {% endblock %}*/
+/* */
+/*    */
+/*  */
 /* */
 /*   */

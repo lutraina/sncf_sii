@@ -19,6 +19,10 @@ class DemandesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        
+        $roles = ['Star 1' => 1, 'Star 2' => 2, 'Star 3' => 3];
+        
+        
         $builder
             ->add('nom',           TextType::class,      array('label' => 'Nom', 
 			                                                   'max_length' => 30))
@@ -39,17 +43,32 @@ class DemandesType extends AbstractType
 			                                                   'widget' => 'single_text', 
 															   'format' => 'dd/MM/yyyy', 
 															   'attr' => array('class' => 'datepicker')))
-            ->add('labelDmd',      ChoiceType::class,    array('label' => 'Niveau de label souhaité', 
-			                                                   'choices' => array('Star 1' => 1, 'Star 2' => 2, 'Star 3' => 3), 
-															   'choices_as_values' => true, 
-															   'expanded' => true, 
-															   'multiple' => false,
-															   'attr' => array('class' => 'imgradio')))
-            ->add('dateLabel',     DateType::class,      array('label' => 'Date (souhaitée) d\'obtention du Label',
-			                                                   'widget' => 'single_text', 
-															   'format' => 'dd/MM/yyyy', 
-															   'attr' => array('class' => 'datepicker'), 
-															   'required' => false))
+//            ->add('labelDmd',      ChoiceType::class,    array('label' => 'Niveau de label souhaité', 
+//			                                                   'choices' => array('Star 1' => 1, 'Star 2' => 2, 'Star 3' => 3), 
+//															   'choices_as_values' => true, 
+//															   'expanded' => true, 
+//															   'multiple' => false,
+//															   'attr' => array('class' => 'imgradio')))
+//	    
+// <img src="{{ asset('bundles/MyLabelBundle/images/Star1.png') }}" alt="" />
+//    
+            ->add('labelDmd', 'choice', [
+                'choices' => $roles,
+                'multiple' => false,
+                'expanded' => true
+            ])
+     													   
+//            ->add('dateLabel',     DateType::class,      array('label' => 'Date (souhaitée) d\'obtention du Label',
+//			                                                   'widget' => 'single_text', 
+//															   'format' => 'dd/MM/yyyy', 
+//															   'attr' => array('class' => 'datepicker'), 
+		 ->add('dateLabel','date',array(
+                    'widget' => 'single_text',
+                    'format' => 'dd-MM-yyyy',
+                    'attr' => array('class' => 'date'),
+                     'input' => 'datetime',
+                    ))													  
+//                     'required' => false))
         ;
     }
     

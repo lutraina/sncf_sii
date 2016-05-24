@@ -1,10 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseResponsive2.html.twig' %}
  
 
-{% block body %}
-    <h1>MYLABEL - ACCUEIL</h1>
 
-    <table class="tableau_labels">
+{% block body %}
+     
+<!-- Two -->
+							<section class="wrapper alt style1" id="four">
+								<div class="inner">
+                                                                    
+                                                                    
+									<h2 style="margin-top:-55px;" class="major">MYLABEL - Accueil</h2>
+									<p>Phrase de présentation ??</p>
+									     
+
+    <ul class="actions">
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/rechercher">Suivre mes demandes</a></li>
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/nouvelle_demande">Nouvelle demande de label</a></li>
+                                            <li><a href="{{ path('labels_index') }}" class="bouton">Label</a></li>
+                                    
+    </ul>
+                          <table class="tableau_labels">
         <thead class="tableau_labels_entete">
             <tr>
                 <th>Cycle de vie des Labels distribu&eacute;s</th>
@@ -43,13 +58,22 @@
         {% endfor %}
         </tbody>
     </table>
+ 
+     
+						 
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+								</div>
+							</section>
+ 
+     
 
+  
     
-    <br>        
-    <div id="menu">
-        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
-        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
-        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
-    </div>
-
+        
 {% endblock %}
+
+   
+  

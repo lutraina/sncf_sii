@@ -3,12 +3,12 @@
 
 
 {% block body %}
-    <h1>Demandes list</h1>
+     
 
     <table class="tableau_demandes">
         <thead class="tableau_demandes_entete">
             <tr>
-                <th colspan=5>Demande On Progress</th>
+                <th colspan=5>Demandes On Progress</th>
             </tr>
         </thead>
         <thead class="tableau_demandes_entete">
@@ -43,7 +43,7 @@
 				  {% elseif demande.statutDmd==2 %} 
                     Planifi&eacute;
 				  {% elseif demande.statutDmd==3 %} 
-                    Traité
+                    Traitï¿½
 				  {% else %} 
 				    Erreur code statut
 				  {% endif %} 
@@ -52,10 +52,6 @@
         {% endfor %}
         </tbody>
     </table>
-
  
-    <br>        
-    <a href="{{ path('demandes_rechercher') }}" class="bouton menu">Suivre mes demandes</a>
-    <a href="{{ path('demandes_new') }}" class="bouton menu">Nouvelle demande de label</a>
 
 {% endblock %}

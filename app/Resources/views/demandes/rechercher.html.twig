@@ -1,14 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseResponsive2.html.twig' %}
+
+
 
 
 {% block body %}
-    <h1>MYLABEL - SUIVI DE MES DEMANDES</h1>
+     
+<!-- Two --><section class="wrapper alt style1" id="four">
+								<div class="inner">
+                                                                    
+                                                                    
+									<h2 style="margin-top:-55px;" class="major">MYLABEL - SUIVI DE MES DEMANDES</h2>
+									<p>Phrase de présentation ??</p>
+									     
 
-{#
-    {{ form_start(form, {'attr': {'action' :  "{{ path('demandes_rechercher') }}"} }) }}   
-#}
-
-    {{ form_start(form) }}   
+    <ul class="actions">
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/rechercher">Suivre mes demandes</a></li>
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/nouvelle_demande">Nouvelle demande de label</a></li>
+                                            <li><a href="{{ path('labels_index') }}" class="bouton">Label</a></li>
+                                    
+    </ul>
+                                      {{ form_start(form) }}   
 
 
     {{ form_errors(form) }}
@@ -22,13 +33,32 @@
 	<input type="submit" value="Visualiser ma demande" class="bouton" />
   
 	{{ form_end(form) }}
-	<br/>  
 
-    <div id="menu">
-        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
-        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
-        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
-    </div>
+ 
+     
+						 
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+								</div>
+							</section>
+ 
+           
+                                            
         
 {% endblock %}
 
+   
+ 
+
+  
+
+ 
+   
+ 
+
+  
+
+
+ 

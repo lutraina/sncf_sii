@@ -33,7 +33,7 @@ class DemandesController extends Controller
             'demandes' => $demandes,
         ));
 */		
-        return $this->render('demandes/index.html.twig', array(
+        return $this->render('demandes/indexResponsive.html.twig', array(
             'demandes' => $demandes,
         ));
  }
@@ -41,7 +41,7 @@ class DemandesController extends Controller
     /**
      * Creates a new Demandes entity.
      *
-     * @Route("/new", name="demandes_new")
+     * @Route("/nouvelle_demande", name="demandes_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)

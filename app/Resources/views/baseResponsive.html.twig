@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Sncf{% endblock %}</title>
+		{% block stylesheets %}
+			{% stylesheets filter='cssrewrite'
+
+			 
+                        '@MyLabelBundle/Resources/public/css/responsive.css'
+			
+			%}
+			<link rel="stylesheet" href="{{ asset_url }}"/>
+			{% endstylesheets %}
+		{% endblock %}
+ 
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+         
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="icon fa-home active"><span>Home</span></a>
+						<a href="#work" class="icon fa-folder"><span>Work</span></a>
+						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+						<a href="#" class="icon fa-twitter"><span>Twitter</span></a>
+					</nav>
+
+				 
+
+			</div>
+
+		
+
+	 
+    
+        {% endblock %}
+        {% block javascripts %}
+        	{% javascripts
+        		'%kernel.root_dir%/../vendor/components/jquery/jquery.js'
+                        '@MyLabelBundle/Resources/public/js/skel.min.js'
+                        '@MyLabelBundle/Resources/public/js/skel-viewport.min.js'
+                        '@MyLabelBundle/Resources/public/js/util.js'
+                        '@MyLabelBundle/Resources/public/js/main.js'
+
+                        
+        	%}
+                
+              
+                
+        	<script src="{{ asset_url }}"/></script>
+        	{% endjavascripts %}
+        {% endblock %}
+
+    
+    </body>
+</html>
