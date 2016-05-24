@@ -8,7 +8,7 @@
 								<div class="inner">
                                                                     
                                                                    
-									<h2 style="margin-top:-55px;" class="major">Liste de demandes</h2>
+									<h2 style="margin-top:-55px;" class="major">Demandes en cour</h2>
 									<p>Phrase de présentation ??</p>
 									     
 
@@ -32,7 +32,39 @@
             </tr>
         </thead>
         <tbody>
-                </tbody>
+        {% for demande in demandes %}
+            <tr class="tableau_demandes_ligne">
+                <td><a href="{{ path('demandes_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
+                <td>{{ demande.nomProjet }}</td>
+                <td>
+				  {% if demande.labelDmd==1 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star1.png") }}" alt="Star 1" title="Star 1">
+				  {% elseif demande.labelDmd==2 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star2.png") }}" alt="Star 2" title="Star 2">
+				  {% elseif demande.labelDmd==3 %} 
+					<img src="{{ asset("bundles/MyLabelBundle/images/Star3.png") }}" alt="Star 3" title="Star 3">
+				  {% else %} 
+				    Erreur code label
+				  {% endif %} 
+				</td>
+                <td>
+                    
+				  {% if demande.statutDmd==1 %} 
+                    En attente
+				  {% elseif demande.statutDmd==2 %} 
+                    Planifi&eacute;
+				  {% elseif demande.statutDmd==3 %} 
+                    Trait�
+				  {% else %} 
+				    Erreur code statut
+				  {% endif %} 
+				</td>
+                                <td>
+				  
+				</td>
+            </tr>
+        {% endfor %}
+        </tbody>
     </table>
 
  

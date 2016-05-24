@@ -24,7 +24,6 @@
         {% for demande in demandes %}
             <tr class="tableau_demandes_ligne">
                 <td><a href="{{ path('demandes_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
-                <td>{% if demande.dateDmd %}{{ demande.dateDmd|date('d/m/Y') }}{% endif %}</td>
                 <td>{{ demande.nomProjet }}</td>
                 <td>
 				  {% if demande.labelDmd==1 %} 

@@ -29,10 +29,9 @@ class DemandesController extends Controller
 
         $demandes = $em->getRepository('MyLabelBundle:Demandes')->findAll();
 		
-/*        return $this->render('menu/index.html', array(
-            'demandes' => $demandes,
-        ));
-*/		
+        $logger = $this->get('logger');
+        $logger->info('$demandes ******* : ' . serialize($demandes));
+		
         return $this->render('demandes/indexResponsive.html.twig', array(
             'demandes' => $demandes,
         ));
@@ -82,20 +81,29 @@ class DemandesController extends Controller
             //On vérifie que les valeurs entrées sont correctes
             if($rechercherForm->isValid())
             {
+                
+//                    $this->getDoctrine()->getEntityManager()->persist($rechercherForm->getData());
+//                    $this->getDoctrine()->getEntityManager()->flush();
+//                    return $this->redirect($this->generateUrl('demandes_show'));
+    
+    
                 //On récupère les données entrées dans le formulaire par l'utilisateur
                 $data = $this->getRequest()->request->get('myylabelbundle_demandesrechercher');
-        
+                $logger = $this->get('logger');
+                $logger->info('I just got the logger' . serialize($data));
+                $logger->error('An error occurred');
+    
+    
+    //var_dump('$data');
                 $em = $this->getDoctrine()->getManager();
                 
                 $laDemande = $em->getRepository('MyLabelBundle:Demandes')->findOneBy(array('id'        => $data['id'], 
-                                                                                           'matricule' => $data['matricule']));
+                                                                                           'matricule' => $data['matricule']
+                                                                                           ));
 
-                if ($laDemande != null)
-                {
+                if ($laDemande != null){
                     return $this->redirectToRoute('demandes_show', array('id' => $laDemande->getId()));
-                }
-                else
-                {
+                } else {
                     return $this->redirectToRoute('labels_index');
                 }
                 

@@ -55,7 +55,8 @@ class DemandesType extends AbstractType
             ->add('labelDmd', 'choice', [
                 'choices' => $roles,
                 'multiple' => false,
-                'expanded' => true
+                'expanded' => true,
+                'label' => 'Niveau de label souhaité'
             ])
      													   
 //            ->add('dateLabel',     DateType::class,      array('label' => 'Date (souhaitée) d\'obtention du Label',

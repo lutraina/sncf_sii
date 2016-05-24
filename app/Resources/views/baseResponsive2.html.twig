@@ -44,13 +44,11 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><a href="{{ path('demandes_index') }}">Demandes en cour</a></li>
+								<li><a href="{{ path('demandes_new') }}">Nouvelle demande</a></li>
+								
 							</ul>
-							<a href="#" class="close">Close</a>
+							<a href="#" class="close">Fermer</a>
 						</div>
 					</nav>
 
@@ -90,7 +88,7 @@
 						<div class="inner">
 							 
 							<ul class="copyright">
-								<li>&copy; Sncf. Tous les droits reservés.</li>
+								<li>&copy; Sncf. Tous droits reservés.</li>
 							</ul>
 						</div>
 					</section>
@@ -101,10 +99,11 @@
                  {% block javascripts %}
         	{% javascripts
         		'%kernel.root_dir%/../vendor/components/jquery/jquery.js'
-                        '%kernel.root_dir%/../vendor/components/jqueryui/jqueryui.js'
+                        '%kernel.root_dir%/../vendor/components/jqueryui/jquery-ui.js'
         		'@MyLabelBundle/Resources/public/js/skel.min.js'
-                        '@MyLabelBundle/Resources/public/js/skel-viewport.min.js'
+                        '@MyLabelBundle/Resources/public/js/jquery.scrollex.min.js'
                         '@MyLabelBundle/Resources/public/js/util.js'
+                        '@MyLabelBundle/Resources/public/js/main.js'
                       
         	%}
                 

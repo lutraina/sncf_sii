@@ -1,9 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseResponsive2.html.twig' %}
+
+
+
 
 {% block body %}
-    <h1>MYLABEL - SUIVI DE MES DEMANDES</h1>
+     
+<!-- Two --><section class="wrapper alt style1" id="four">
+								<div class="inner">
+                                                                    
+                                                                    
+									<h2 style="margin-top:-55px;" class="major">MYLABEL - SUIVI DE MES DEMANDES</h2>
+									<p>Phrase de prÃ©sentation ??</p>
+									     
 
-    <table class="tableau_demandes">
+    <ul class="actions">
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/rechercher">Suivre mes demandes</a></li>
+                                            <li><a class="bouton menu" href="/my_label/web/app_dev.php/demandes/nouvelle_demande">Nouvelle demande de label</a></li>
+                                            <li><a href="{{ path('labels_index') }}" class="bouton">Label</a></li>
+                                    
+    </ul>
+                          <table class="tableau_demandes">
         <thead class="tableau_demandes_entete">
             <tr>
                 <th colspan=5>Demande On Progress</th>
@@ -40,7 +56,7 @@
 				  {% elseif demande.statutDmd==2 %} 
                     Planifi&eacute;
 				  {% elseif demande.statutDmd==3 %} 
-                    Traité
+                    Traitï¿½
 				  {% else %} 
 				    Erreur code statut
 				  {% endif %} 
@@ -48,37 +64,29 @@
             </tr>
         </tbody>
     </table>
-    <br>
-
-{#    
-    {{ form_start(form, {'attr': {'action' :  "{{ path('demandes_rechercher') }}"} } ) }}   
-#}
-    <form action="{{ path('demandes_rechercher') }}" method="post" {{ form_enctype(form) }}>
-
-    
-    {{ form_errors(form) }}
-    
-    <div id="recherche">
-        <div>
-            <label>Rechercher une autre demande :</label>
-            {{ form_widget(form.id) }}
-        </div>
-        <input type="hidden" value="{{ demande.matricule }}" name="matricule">
-        {{ form_widget(form._token) }}
-    </div>
-	<input type="submit" value="Recherche" class="bouton" />
-    <br>  
-    
-{#	{{ form_end(form) }}  #}
-    
+ 
+                                 <div style="width:700px; ">
+                                    
+                                <h2 style="margin-top:80px;" class="major">Nouvelle recherche</h2>
+									
+                            <form action="{{ path('demandes_rechercher') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <br/><p>
+            <button type="submit">Visualiser ma demande</button>
+        </p>
     </form>
-
     
-    <div id="menu">
-        <a href="{{ path('labels_index') }}" class="bouton">Label</a>
-        <a href="{{ path('demandes_rechercher') }}" class="bouton">Suivre mes demandes</a>
-        <a href="{{ path('demandes_new') }}" class="bouton">Nouvelle demande de label</a>
-    </div>
-
-
+                                 
+                                                                        
+                                                                        
+                                                                        
+								</div></div>
+							</section>
+ 
+           
+                                            
+        
 {% endblock %}
+
+   
+ 

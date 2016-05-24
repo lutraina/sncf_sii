@@ -10,3 +10,5 @@ Dernières mises à jour :
     -   Réglage des routers : liens
     -   règle css : ajout de font une seule fois
     -   Modifier base : matricule : unique / label étoiles choix : default 0
+    -   Utiliser les logs
+    -   il manque l'envoi du mail
