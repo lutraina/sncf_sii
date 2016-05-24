@@ -12,3 +12,7 @@ Dernières mises à jour :
     -   Modifier base : matricule : unique / label étoiles choix : default 0
     -   Utiliser les logs
     -   il manque l'envoi du mail
+    -   envoi commande en base
+    -   selection commande par id
+    -   recherche de commande et affichage
+    -   git
